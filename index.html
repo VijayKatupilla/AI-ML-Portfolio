@@ -116,11 +116,13 @@
   .artifact .field p{ color:var(--text); font-size:0.98rem; }
   .artifact .field ul{ padding-left:1.2rem; color:var(--text); }
   .artifact .field ul li{ margin-bottom:0.35rem; }
-  .img-row{ display:flex; gap:1rem; margin-top:1.5rem; flex-wrap:wrap; }
+  .img-row{ display:flex; gap:1.5rem; margin-top:1.5rem; flex-wrap:wrap; align-items:flex-start; }
   .img-row img{
-    width:100%; max-width:260px; border-radius:8px;
+    height:auto; border-radius:8px;
     border:1px solid var(--border);
   }
+  .img-row .img-portrait{ width:100%; max-width:340px; }
+  .img-row .img-landscape{ width:100%; max-width:560px; }
   .btn-row{ display:flex; gap:0.8rem; margin-top:1.3rem; flex-wrap:wrap; }
   .note{
     margin-top:1.3rem; padding:0.8rem 1rem;
@@ -147,9 +149,9 @@
   <span class="brand">VK://</span>
   <a href="#home">home</a>
   <a href="#about">about</a>
-  <a href="#timeline">timeline</a>
-  <a href="#ai-lab">ai lab</a>
-  <a href="#assessment">assessment</a>
+  <a href="#timeline">Artifact 1</a>
+  <a href="#ai-lab">Artifact 2</a>
+  <a href="#assessment">Artifact 3</a>
 </nav>
 
 <section id="home">
@@ -169,6 +171,7 @@
   <h2 style="font-size:1.8rem; margin-bottom:1.2rem;">Where engineering meets applied AI</h2>
   <p>I combine a full-stack and cloud engineering background — containerized microservices, workflow automation, API design — with a growing focus on applied AI: prompt engineering, retrieval-augmented systems, and multi-agent tools. The artifacts below trace that shift directly: a researched history of how AI got here, a hands-on AI Lab project where I engineered prompts and a constrained booking bot from scratch, and an honest self-assessment of where my leadership skills need to grow to manage AI transitions, not just build them.</p>
   <p>I'm currently learning in public — LangChain, GenAI engineering, and the leadership side of change management — and this portfolio is a record of that, not a highlight reel with the rough edges removed.</p>
+  <p>Outside of engineering, I'm a competitive athlete and a youth-sports advocate — I grew up playing competitively in India and have spent the last few years encouraging kids here to see sports as more than a career path: a way to build confidence, discipline, and leadership. [Tell me your other interests — reading, travel, music, gaming, etc. — and I'll fold them in here.]</p>
 </section>
 
 <section>
@@ -216,8 +219,8 @@
       <p>Interviewed a teammate, drafted structured AI prompts for a TED-style introduction, built my own Speaker Profile, and — as part of the Bot Builders task force — compiled the team's profiles into a knowledge base with a system prompt constraining the bot to act only as a booking agent. Tested live against unscripted audience queries.</p>
     </div>
     <div class="img-row">
-      <img src="assets/process_infographic_cleaned.png" alt="Project process infographic">
-      <img src="assets/Marketing_Infographic.png" alt="Speaker's Bureau marketing infographic">
+      <img class="img-portrait" src="assets/process_infographic_cleaned.png" alt="Project process infographic">
+      <img class="img-landscape" src="assets/Marketing_Infographic.png" alt="Speaker's Bureau marketing infographic">
     </div>
     <div class="field">
       <div class="field-label">Speaker Profile — Vijay</div>
