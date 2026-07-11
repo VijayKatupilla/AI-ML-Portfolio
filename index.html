@@ -18,6 +18,7 @@
     --cyan:#22D3EE;
     --green:#4ADE80;
     --purple:#A78BFA;
+    --maroon:#C2465B;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{ scroll-behavior:smooth; }
@@ -58,7 +59,7 @@
   .hero{ display:flex; gap:3rem; align-items:center; flex-wrap:wrap; }
   .hero img{
     width:172px; height:172px; border-radius:50%;
-    object-fit:cover; border:2px solid var(--amber);
+    object-fit:cover; border:3px solid var(--maroon);
     flex-shrink:0;
   }
   .hero-copy{ flex:1; min-width:280px; }
@@ -85,6 +86,23 @@
     background:var(--bg-panel); border:1px solid var(--border);
     color:var(--text-dim);
   }
+  .chip.strength{ background:rgba(74,222,128,0.10); border-color:var(--green); color:var(--green); }
+  .chip.growth{ background:rgba(245,158,11,0.10); border-color:var(--amber); color:var(--amber); }
+
+  .pattern-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.6rem; margin-top:1.2rem; }
+  .pattern-col{ padding:1.2rem; background:var(--bg-panel-2); border:1px solid var(--border); border-radius:8px; }
+  .pattern-col h4{ font-size:0.85rem; margin-bottom:0.8rem; }
+  .pattern-sublabel{ font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-dim); margin:0.7rem 0 0.4rem; }
+  @media(max-width:640px){ .pattern-grid{ grid-template-columns:1fr; } }
+
+  /* VALUE PROP */
+  #value-prop{ border-top:1px solid var(--border); }
+  #value-prop .eyebrow{ color:var(--maroon); }
+  .vp-grid{ display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-top:1.5rem; }
+  .vp-block{ padding:1.4rem; background:var(--bg-panel); border:1px solid var(--border); border-radius:8px; }
+  .vp-block h3{ font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--maroon); margin-bottom:0.6rem; }
+  .vp-block p{ color:var(--text); font-size:0.95rem; }
+  @media(max-width:640px){ .vp-grid{ grid-template-columns:1fr; } }
 
   /* ABOUT */
   #about{ border-top:1px solid var(--border); }
@@ -181,6 +199,7 @@
 <nav>
   <span class="brand">VK://</span>
   <a href="#home">Home</a>
+  <a href="#value-prop">Value</a>
   <a href="#about">About</a>
   <a href="#timeline">Artifact 1</a>
   <a href="#ai-lab">Artifact 2</a>
@@ -199,6 +218,20 @@
         <a href="#about" class="btn">About Me</a>
         <a href="#timeline" class="btn solid">View Artifacts →</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="value-prop">
+  <span class="eyebrow">// value proposition &amp; audience</span>
+  <div class="vp-grid">
+    <div class="vp-block">
+      <h3>Value Proposition</h3>
+      <p>I help bridge cloud engineering and applied AI — proving through this coursework that I can research a field's history, build a working AI product end-to-end, and honestly evaluate my own leadership gaps rather than just my technical output.</p>
+    </div>
+    <div class="vp-block">
+      <h3>Target Audience</h3>
+      <p>Written primarily for my AIML-500 instructor and classmates evaluating this coursework, and secondarily for engineering peers curious about a practical, in-progress transition from cloud engineering into applied AI.</p>
     </div>
   </div>
 </section>
@@ -237,6 +270,19 @@
       <span class="chip">TensorFlow</span>
       <span class="chip">scikit-learn</span>
       <span class="chip">Prompt Engineering</span>
+    </div>
+  </div>
+  <div class="stack-group">
+    <h3>Skills demonstrated across this portfolio</h3>
+    <div class="chip-row">
+      <span class="chip">Research Synthesis</span>
+      <span class="chip">Historical Analysis</span>
+      <span class="chip">Technical Writing</span>
+      <span class="chip">AI System Design</span>
+      <span class="chip">Product Testing</span>
+      <span class="chip">Self-Evaluation</span>
+      <span class="chip">Change Leadership</span>
+      <span class="chip">Critical Analysis</span>
     </div>
   </div>
 </section>
@@ -333,6 +379,41 @@
     <div class="field">
       <div class="field-label">Value proposition</div>
       <p>Demonstrates a willingness to name gaps precisely rather than soften them, and to critique the assessment tools themselves — proposing data-quality judgment and psychological safety as dimensions both instruments were missing.</p>
+    </div>
+    <div class="field">
+      <div class="field-label">Strengths vs. growth areas</div>
+      <div class="pattern-grid">
+        <div class="pattern-col">
+          <h4>AI/ML Competency</h4>
+          <div class="pattern-sublabel">Strengths</div>
+          <div class="chip-row">
+            <span class="chip strength">Technical Understanding</span>
+            <span class="chip strength">Stakeholder Communication</span>
+            <span class="chip strength">Ethical Awareness</span>
+          </div>
+          <div class="pattern-sublabel">Growth areas</div>
+          <div class="chip-row">
+            <span class="chip growth">Budget &amp; Resource Management</span>
+            <span class="chip growth">Training Program Development</span>
+            <span class="chip growth">Feedback &amp; Impact Measurement</span>
+          </div>
+        </div>
+        <div class="pattern-col">
+          <h4>Change Management</h4>
+          <div class="pattern-sublabel">Strengths</div>
+          <div class="chip-row">
+            <span class="chip strength">Planning &amp; Organization</span>
+            <span class="chip strength">Communication</span>
+            <span class="chip strength">Problem-Solving</span>
+          </div>
+          <div class="pattern-sublabel">Growth areas</div>
+          <div class="chip-row">
+            <span class="chip growth">Sitting with Ambiguity</span>
+            <span class="chip growth">Leading Full Change Initiatives</span>
+            <span class="chip growth">Conflict Resolution</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
