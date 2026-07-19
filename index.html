@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vijay Katupilla — AI/ML Portfolio</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="description" content="AIML-500 professional portfolio — AI history research, an AI-engineered booking bot, and an honest self-assessment of leadership gaps.">
+<meta property="og:title" content="Vijay Katupilla — AI/ML Portfolio">
+<meta property="og:description" content="AIML-500 professional portfolio: research synthesis, applied AI system design, and self-assessment across four artifacts.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -227,6 +232,18 @@
     section{ padding:3.5rem 1.2rem; }
     nav{ gap:1.1rem; padding:1rem; }
   }
+
+  @media print{
+    body{ background:#FFFFFF !important; color:#111111 !important; }
+    nav, .btn-row, .tab-buttons{ display:none !important; }
+    section{ padding:1rem 0 !important; max-width:100% !important; }
+    .tab-panel{ display:block !important; page-break-after:always; }
+    .chip, .vp-inline, .note, .panel, .pattern-col{
+      background:#F3F3F3 !important; color:#111111 !important; border-color:#CCCCCC !important;
+    }
+    a{ color:#111111 !important; text-decoration:underline !important; }
+    .artifact::before{ display:none !important; }
+  }
 </style>
 </head>
 <body>
@@ -341,17 +358,11 @@
           <div class="field-label">Process</div>
           <p>Researched five major AI eras, identified the cause and effect behind two AI winters, and synthesized four original observations connecting theory, funding, and hardware across the full timeline.</p>
         </div>
-        <div class="field">
-          <div class="field-label">Key takeaways</div>
-          <ul>
-            <li>AI was born as philosophy in 1950 — six decades before hardware could test it.</li>
-            <li>Both AI winters shared one root cause: the ideas outran the compute, every time.</li>
-            <li>Hinton, Bengio, and LeCun worked through 20 unfunded years. That persistence is why deep learning exists.</li>
-            <li>AlexNet in 2012 required three things — theory, data, and GPUs — to align simultaneously.</li>
-          </ul>
+        <div class="img-row">
+          <img class="img-landscape" src="assets/timeline_infographic.svg" alt="Visual timeline of AI history from 1950 to present, showing five eras and four key takeaways" style="max-width:680px;">
         </div>
         <div class="btn-row">
-          <a href="assets/Katupilla_Vijay_AI_History_Timeline_FIXED.pptx" class="btn">Download the full deck</a>
+          <a href="assets/Katupilla_Vijay_AI_History_Timeline_FIXED.pptx" class="btn">Download the full 11-slide deck</a>
         </div>
         <div class="note">Sources: Bender &amp; Our World in Data (n.d.) · IEEE Computer Society (n.d.) · Putchuon (2024)</div>
         <div class="vp-inline">
