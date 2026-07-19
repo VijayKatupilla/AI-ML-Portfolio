@@ -1,0 +1,95 @@
+<svg viewBox="0 0 1100 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #0D1117; }
+      .panel { fill: #161B22; stroke: #2A313C; stroke-width: 1; }
+      .title { font-family: 'JetBrains Mono', 'Courier New', monospace; font-weight: 700; fill: #F0F6FC; }
+      .subtitle { font-family: 'JetBrains Mono', 'Courier New', monospace; fill: #8B949E; }
+      .year { font-family: 'JetBrains Mono', 'Courier New', monospace; font-weight: 700; }
+      .eraTitle { font-family: 'JetBrains Mono', 'Courier New', monospace; font-weight: 700; fill: #F0F6FC; }
+      .desc { font-family: Arial, Helvetica, sans-serif; fill: #8B949E; }
+      .teachHeading { font-family: 'JetBrains Mono', 'Courier New', monospace; font-weight: 700; fill: #F0F6FC; }
+      .teachNum { font-family: 'JetBrains Mono', 'Courier New', monospace; font-weight: 700; fill: #F59E0B; }
+      .teachText { font-family: Arial, Helvetica, sans-serif; fill: #F0F6FC; }
+      .footer { font-family: 'JetBrains Mono', 'Courier New', monospace; fill: #8B949E; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1100" height="700"/>
+
+  <text x="550" y="46" text-anchor="middle" class="title" font-size="26">75 Years of AI: A Visual Timeline</text>
+  <text x="550" y="70" text-anchor="middle" class="subtitle" font-size="13">Five eras, two winters, one turning point</text>
+
+  <!-- Timeline axis -->
+  <line x1="70" y1="280" x2="1030" y2="280" stroke="#2A313C" stroke-width="2"/>
+
+  <!-- Era 1: Foundations -->
+  <text x="158" y="238" text-anchor="middle" class="year" font-size="13" fill="#A78BFA">1950–1969</text>
+  <circle cx="158" cy="280" r="9" fill="#A78BFA"/>
+  <line x1="158" y1="280" x2="158" y2="308" stroke="#2A313C" stroke-width="1.5"/>
+  <text x="158" y="330" text-anchor="middle" class="eraTitle" font-size="13.5">Foundations</text>
+  <text x="158" y="352" text-anchor="middle" class="desc" font-size="11.5">Turing Test, Dartmouth,</text>
+  <text x="158" y="368" text-anchor="middle" class="desc" font-size="11.5">Perceptron, ELIZA</text>
+
+  <!-- Era 2: AI Winters -->
+  <text x="354" y="238" text-anchor="middle" class="year" font-size="13" fill="#C2465B">1969–1993</text>
+  <circle cx="354" cy="280" r="9" fill="#C2465B"/>
+  <line x1="354" y1="280" x2="354" y2="308" stroke="#2A313C" stroke-width="1.5"/>
+  <text x="354" y="330" text-anchor="middle" class="eraTitle" font-size="13.5">Two AI Winters</text>
+  <text x="354" y="352" text-anchor="middle" class="desc" font-size="11.5">Funding collapsed twice —</text>
+  <text x="354" y="368" text-anchor="middle" class="desc" font-size="11.5">hype outran hardware</text>
+
+  <!-- Era 3: Revival -->
+  <text x="550" y="238" text-anchor="middle" class="year" font-size="13" fill="#22D3EE">1997–2011</text>
+  <circle cx="550" cy="280" r="9" fill="#22D3EE"/>
+  <line x1="550" y1="280" x2="550" y2="308" stroke="#2A313C" stroke-width="1.5"/>
+  <text x="550" y="330" text-anchor="middle" class="eraTitle" font-size="13.5">Revival</text>
+  <text x="550" y="352" text-anchor="middle" class="desc" font-size="11.5">Deep Blue, statistical ML,</text>
+  <text x="550" y="368" text-anchor="middle" class="desc" font-size="11.5">IBM Watson</text>
+
+  <!-- Era 4: AlexNet turning point (emphasized) -->
+  <text x="746" y="232" text-anchor="middle" class="year" font-size="14" fill="#F59E0B">2012</text>
+  <circle cx="746" cy="280" r="13" fill="#0D1117" stroke="#F59E0B" stroke-width="2.5"/>
+  <circle cx="746" cy="280" r="5" fill="#F59E0B"/>
+  <line x1="746" y1="280" x2="746" y2="308" stroke="#2A313C" stroke-width="1.5"/>
+  <text x="746" y="330" text-anchor="middle" class="eraTitle" font-size="13.5" fill="#F59E0B">AlexNet Turning Point</text>
+  <text x="746" y="352" text-anchor="middle" class="desc" font-size="11.5">Theory, data, and GPUs</text>
+  <text x="746" y="368" text-anchor="middle" class="desc" font-size="11.5">finally aligned</text>
+
+  <!-- Era 5: Deep Learning Revolution -->
+  <text x="942" y="238" text-anchor="middle" class="year" font-size="13" fill="#4ADE80">2017–Present</text>
+  <circle cx="942" cy="280" r="9" fill="#4ADE80"/>
+  <line x1="942" y1="280" x2="942" y2="308" stroke="#2A313C" stroke-width="1.5"/>
+  <text x="942" y="330" text-anchor="middle" class="eraTitle" font-size="13.5">Deep Learning Era</text>
+  <text x="942" y="352" text-anchor="middle" class="desc" font-size="11.5">Transformers, GPT-3,</text>
+  <text x="942" y="368" text-anchor="middle" class="desc" font-size="11.5">ChatGPT, multimodal AI</text>
+
+  <!-- What this teaches panel -->
+  <text x="70" y="440" class="teachHeading" font-size="18">What This Timeline Teaches</text>
+
+  <rect class="panel" x="70" y="460" width="470" height="95" rx="8"/>
+  <text x="94" y="488" class="teachNum" font-size="15">01</text>
+  <text x="124" y="488" class="teachText" font-size="12.5">AI was philosophy before it was hardware —</text>
+  <text x="124" y="507" class="teachText" font-size="12.5">Turing asked the question in 1950, six decades</text>
+  <text x="124" y="526" class="teachText" font-size="12.5">before compute could test it.</text>
+
+  <rect class="panel" x="560" y="460" width="470" height="95" rx="8"/>
+  <text x="584" y="488" class="teachNum" font-size="15">02</text>
+  <text x="614" y="488" class="teachText" font-size="12.5">Both AI winters shared one root cause:</text>
+  <text x="614" y="507" class="teachText" font-size="12.5">the ideas kept outrunning the available</text>
+  <text x="614" y="526" class="teachText" font-size="12.5">compute, every time.</text>
+
+  <rect class="panel" x="70" y="570" width="470" height="95" rx="8"/>
+  <text x="94" y="598" class="teachNum" font-size="15">03</text>
+  <text x="124" y="598" class="teachText" font-size="12.5">Hinton, Bengio, and LeCun worked through</text>
+  <text x="124" y="617" class="teachText" font-size="12.5">20 unfunded years. That persistence is</text>
+  <text x="124" y="636" class="teachText" font-size="12.5">why deep learning exists today.</text>
+
+  <rect class="panel" x="560" y="570" width="470" height="95" rx="8"/>
+  <text x="584" y="598" class="teachNum" font-size="15">04</text>
+  <text x="614" y="598" class="teachText" font-size="12.5">AlexNet in 2012 needed three things to</text>
+  <text x="614" y="617" class="teachText" font-size="12.5">align at once — theory, data, and GPUs —</text>
+  <text x="614" y="636" class="teachText" font-size="12.5">not one breakthrough alone.</text>
+
+  <text x="1030" y="688" text-anchor="end" class="footer" font-size="11">AIML-500 · Workshop 1 · Vijay Katupilla</text>
+</svg>
