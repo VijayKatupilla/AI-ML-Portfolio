@@ -232,6 +232,24 @@
   }
   .connect-links a:hover{ border-color:var(--green); color:var(--green); }
 
+  .img-row img{ cursor:zoom-in; transition:opacity .15s; }
+  .img-row img:hover{ opacity:0.88; }
+  #lightbox-overlay{
+    display:none; position:fixed; inset:0; z-index:200;
+    background:rgba(10,7,15,0.92); backdrop-filter:blur(4px);
+    align-items:center; justify-content:center; padding:3rem; cursor:zoom-out;
+  }
+  #lightbox-overlay img{
+    max-width:min(1200px, 92vw); max-height:88vh;
+    border-radius:10px; box-shadow:0 12px 40px rgba(0,0,0,0.5);
+  }
+  #lightbox-close{
+    position:absolute; top:1.5rem; right:2rem;
+    font-family:'JetBrains Mono',monospace; font-size:0.9rem;
+    color:var(--text); background:var(--bg-panel); border:1px solid var(--border);
+    padding:0.5rem 0.9rem; border-radius:6px; cursor:pointer;
+  }
+
   footer{
     text-align:center; padding:2.6rem 2rem;
     color:var(--text-dim); font-family:'JetBrains Mono',monospace; font-size:0.78rem;
@@ -300,6 +318,11 @@
   <p>Outside of engineering, I'm a competitive athlete and a youth-sports advocate — I grew up playing competitively in India and have spent the last few years encouraging kids here to see sports as more than a career path: a way to build confidence, discipline, and leadership.</p>
 
   <div class="stack-group">
+    <h3>How I approach this work</h3>
+    <p style="margin-bottom:0;">My approach to AI/ML is the same one I bring to any engineering problem: build the smallest working version first, then find out what's actually broken by testing it against real use — not by assuming the plan is right. I'd rather ship something imperfect and fix it against real feedback than polish a plan that's never been tested.</p>
+  </div>
+
+  <div class="stack-group">
     <h3>Core engineering</h3>
     <div class="chip-row">
       <span class="chip">Java</span>
@@ -358,7 +381,7 @@
     <div class="tab-panel" id="panel1" style="--accent-tab:var(--cyan);">
       <div class="artifact" style="--accent:var(--cyan);">
         <span class="tag">Artifact 01</span>
-        <h2>AI Lab: The Speaker's Bureau Bot</h2>
+         <h2>AI Lab: The Speaker's Bureau Bot</h2>
         <div class="skill-row">
           <span class="chip">Prompt Engineering</span>
           <span class="chip">AI System Design</span>
@@ -373,8 +396,8 @@
           <p>Interviewed a teammate, drafted structured AI prompts for a TED-style introduction, built my own Speaker Profile, and — as part of the Bot Builders task force — compiled the team's profiles into a knowledge base with a system prompt constraining the bot to act only as a booking agent. Tested live against unscripted audience queries.</p>
         </div>
         <div class="img-row">
-          <img class="img-portrait" src="assets/process_infographic_cleaned.png" alt="Project process infographic">
-          <img class="img-landscape" src="assets/Marketing_Infographic.png" alt="Speaker's Bureau marketing infographic">
+          <img class="img-portrait" src="assets/process_infographic_cleaned.png" alt="Project process infographic" onclick="openLightbox('assets/process_infographic_cleaned.png')">
+          <img class="img-landscape" src="assets/Marketing_Infographic.png" alt="Speaker's Bureau marketing infographic" onclick="openLightbox('assets/Marketing_Infographic.png')">
         </div>
         <div class="field">
           <div class="field-label">Speaker Profile — Vijay</div>
@@ -419,7 +442,7 @@
           <p>Researched the nested relationship between AI, ML, and deep learning, then designed an infographic showing that relationship alongside the three primary learning paradigms — supervised, unsupervised, and reinforcement learning — each grounded in a concrete, real-world example rather than an abstract definition.</p>
         </div>
         <div class="img-row">
-          <img class="img-landscape" src="assets/ai_ml_dl_infographic.svg" alt="Infographic showing the nested relationship between AI, ML, and deep learning, and the three types of machine learning" style="max-width:640px;">
+          <img class="img-landscape" src="assets/ai_ml_dl_infographic.svg" alt="Infographic showing the nested relationship between AI, ML, and deep learning, and the three types of machine learning" style="max-width:640px;" onclick="openLightbox('assets/ai_ml_dl_infographic.svg')">
         </div>
         <div class="vp-inline">
           <div class="vp-row">
@@ -437,7 +460,7 @@
     <div class="tab-panel" id="panel3" style="--accent-tab:var(--amber);">
       <div class="artifact" style="--accent:var(--amber);">
         <span class="tag">Artifact 03</span>
-        <h2>75 Years of AI: What the History Actually Teaches</h2>
+          <h2>75 Years of AI: What the History Actually Teaches</h2>
         <div class="skill-row">
           <span class="chip">Research Synthesis</span>
           <span class="chip">Historical Analysis</span>
@@ -452,7 +475,7 @@
           <p>Researched five major AI eras, identified the cause and effect behind two AI winters, and synthesized four original observations connecting theory, funding, and hardware across the full timeline.</p>
         </div>
         <div class="img-row">
-          <img class="img-landscape" src="assets/timeline_infographic.svg" alt="Visual timeline of AI history from 1950 to present, showing five eras and four key takeaways" style="max-width:680px;">
+          <img class="img-landscape" src="assets/timeline_infographic.svg" alt="Visual timeline of AI history from 1950 to present, showing five eras and four key takeaways" style="max-width:680px;" onclick="openLightbox('assets/timeline_infographic.svg')">
         </div>
         <div class="btn-row">
           <a href="assets/Katupilla_Vijay_AI_History_Timeline_FIXED.pptx" class="btn">Download the full 11-slide deck</a>
@@ -544,11 +567,9 @@
   <h2 style="font-size:1.8rem; margin-bottom:0.3rem;">What colleagues say</h2>
   <div class="testimonial-block">
     <p>In performance conversations, my engineering manager has described my work on our team's cloud migration and automation projects as dependable and clearly communicated, and has noted that I'm someone the team can rely on to work through ambiguous problems without losing momentum.</p>
-    <span class="testimonial-source">— Paraphrased from feedback conversations with my engineering manager, not a direct quote</span>
   </div>
   <div class="testimonial-block">
     <p>A teammate from the AI Lab group project mentioned that the system prompt I wrote for our booking bot was the piece that made the live demo actually hold up under unscripted questions, and that I was easy to hand ambiguous, half-defined tasks to during crunch.</p>
-    <span class="testimonial-source">— Paraphrased from a conversation with an AI Lab teammate, not a direct quote</span>
   </div>
 </section>
 
@@ -566,6 +587,22 @@
 <footer>
   AIML-500 · Indiana Wesleyan University · Instructor: Dr. Glory Adebayo
 </footer>
+
+<div id="lightbox-overlay" onclick="closeLightbox()">
+  <button id="lightbox-close" onclick="closeLightbox(event)">✕ Close</button>
+  <img id="lightbox-img" src="" alt="Enlarged artifact image">
+</div>
+
+<script>
+  function openLightbox(src){
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-overlay').style.display = 'flex';
+  }
+  function closeLightbox(e){
+    if(e) e.stopPropagation();
+    document.getElementById('lightbox-overlay').style.display = 'none';
+  }
+</script>
 
 </body>
 </html>
