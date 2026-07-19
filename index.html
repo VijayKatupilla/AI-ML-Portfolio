@@ -13,17 +13,18 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0D1117;
-    --bg-panel:#161B22;
-    --bg-panel-2:#1C232C;
-    --border:#2A313C;
-    --text:#F0F6FC;
-    --text-dim:#8B949E;
-    --amber:#F59E0B;
-    --cyan:#22D3EE;
+    --bg:#120E1A;
+    --bg-panel:#1B1526;
+    --bg-panel-2:#221A30;
+    --border:#33294A;
+    --text:#F3EFFA;
+    --text-dim:#9C8FB5;
+    --amber:#F5A623;
+    --cyan:#2DD4E8;
     --green:#4ADE80;
-    --purple:#A78BFA;
-    --maroon:#C2465B;
+    --purple:#B794F6;
+    --maroon:#E85D75;
+    --on-accent:#120E1A;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{ scroll-behavior:smooth; }
@@ -41,7 +42,7 @@
     position:sticky; top:0; z-index:50;
     display:flex; gap:1.8rem; align-items:center;
     padding:1.1rem 2rem;
-    background:rgba(13,17,23,0.88);
+    background:rgba(18,14,26,0.82);
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--border);
     font-family:'JetBrains Mono',monospace;
@@ -69,7 +70,19 @@
   }
   .hero-copy{ flex:1; min-width:280px; }
   .eyebrow.hero-eyebrow{ color:var(--cyan); }
-  h1{ font-size:2.5rem; margin-bottom:0.7rem; }
+  #home{ position:relative; overflow:hidden; }
+  #home::before{
+    content:''; position:absolute; top:-120px; left:-100px;
+    width:480px; height:480px; border-radius:50%;
+    background:radial-gradient(circle, rgba(245,166,35,0.22), rgba(183,148,246,0.16) 55%, transparent 75%);
+    filter:blur(10px); pointer-events:none; z-index:0;
+  }
+  .hero, .hero *{ position:relative; z-index:1; }
+  h1{
+    font-size:2.5rem; margin-bottom:0.7rem;
+    background:linear-gradient(90deg, var(--amber), var(--purple));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
   .hero-copy p{ color:var(--text-dim); font-size:1.05rem; max-width:56ch; }
   .btn-row{ display:flex; gap:0.8rem; margin-top:1.6rem; flex-wrap:wrap; }
   .btn{
@@ -79,8 +92,8 @@
     text-decoration:none; border-radius:6px;
     transition:background .15s, color .15s;
   }
-  .btn:hover{ background:var(--amber); color:#0D1117; }
-  .btn.solid{ background:var(--amber); color:#0D1117; }
+  .btn:hover{ background:var(--amber); color:var(--on-accent); font-weight:600; }
+  .btn.solid{ background:var(--amber); color:var(--on-accent); }
   .btn.solid:hover{ opacity:0.85; }
 
   /* CHIPS */
@@ -91,8 +104,8 @@
     background:var(--bg-panel); border:1px solid var(--border);
     color:var(--text-dim);
   }
-  .chip.strength{ background:rgba(74,222,128,0.10); border-color:var(--green); color:var(--green); }
-  .chip.growth{ background:rgba(245,158,11,0.10); border-color:var(--amber); color:var(--amber); }
+  .chip.strength{ background:rgba(74,222,128,0.12); border-color:var(--green); color:var(--green); }
+  .chip.growth{ background:rgba(245,166,35,0.12); border-color:var(--amber); color:var(--amber); }
 
   .pattern-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.6rem; margin-top:1.2rem; }
   .pattern-col{ padding:1.2rem; background:var(--bg-panel-2); border:1px solid var(--border); border-radius:8px; }
@@ -145,7 +158,7 @@
   #tab2:checked ~ .tab-buttons label[for="tab2"],
   #tab3:checked ~ .tab-buttons label[for="tab3"],
   #tab4:checked ~ .tab-buttons label[for="tab4"]{
-    color:var(--bg); background:var(--accent-tab,var(--amber)); border-color:var(--accent-tab,var(--amber));
+    color:var(--on-accent); background:var(--accent-tab,var(--amber)); border-color:var(--accent-tab,var(--amber));
   }
 
   .tab-panel{ display:none; padding-top:2.5rem; --accent:var(--accent-tab,var(--amber)); }
@@ -183,7 +196,7 @@
   .field ul{ padding-left:1.2rem; color:var(--text); }
   .field ul li{ margin-bottom:0.4rem; }
   .img-row{ display:flex; gap:1.5rem; margin-top:1.5rem; flex-wrap:wrap; align-items:flex-start; }
-  .img-row img{ height:auto; border-radius:8px; border:1px solid var(--border); }
+  .img-row img{ height:auto; border-radius:10px; border:1px solid var(--border); box-shadow:0 4px 16px rgba(28,27,31,0.10); }
   .img-row .img-portrait{ width:100%; max-width:340px; }
   .img-row .img-landscape{ width:100%; max-width:560px; }
   .note{
@@ -238,11 +251,12 @@
     nav, .btn-row, .tab-buttons{ display:none !important; }
     section{ padding:1rem 0 !important; max-width:100% !important; }
     .tab-panel{ display:block !important; page-break-after:always; }
-    .chip, .vp-inline, .note, .panel, .pattern-col{
+    h1{ -webkit-text-fill-color:#111111 !important; background:none !important; color:#111111 !important; }
+    .chip, .vp-inline, .note, .panel, .pattern-col, .testimonial-block{
       background:#F3F3F3 !important; color:#111111 !important; border-color:#CCCCCC !important;
     }
     a{ color:#111111 !important; text-decoration:underline !important; }
-    .artifact::before{ display:none !important; }
+    #home::before{ display:none !important; }
   }
 </style>
 </head>
@@ -250,11 +264,11 @@
 
 <nav>
   <span class="brand">VK://</span>
-  <a href="#home">home</a>
-  <a href="#about">about</a>
-  <a href="#artifacts">artifacts</a>
-  <a href="#testimonials">testimonials</a>
-  <a href="#connect">connect</a>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#artifacts">Artifacts</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="#connect">Connect</a>
 </nav>
 
 <section id="home">
@@ -335,44 +349,53 @@
     <input type="radio" name="artifact-tabs" id="tab4">
 
     <div class="tab-buttons">
-      <label for="tab1">Artifact 1 — Timeline</label>
+      <label for="tab1">Artifact 1 — AI Lab</label>
       <label for="tab2">Artifact 2 — AI vs. ML vs. DL</label>
-      <label for="tab3">Artifact 3 — AI Lab</label>
+      <label for="tab3">Artifact 3 — AI/ML Timeline</label>
       <label for="tab4">Artifact 4 — Self-Assessment</label>
     </div>
 
     <div class="tab-panel" id="panel1" style="--accent-tab:var(--cyan);">
       <div class="artifact" style="--accent:var(--cyan);">
         <span class="tag">Artifact 01</span>
-        <h2>75 Years of AI: What the History Actually Teaches</h2>
+        <h2>AI Lab: The Speaker's Bureau Bot</h2>
         <div class="skill-row">
-          <span class="chip">Research Synthesis</span>
-          <span class="chip">Historical Analysis</span>
-          <span class="chip">Technical Writing</span>
+          <span class="chip">Prompt Engineering</span>
+          <span class="chip">AI System Design</span>
+          <span class="chip">Product Testing</span>
         </div>
         <div class="field">
           <div class="field-label">Objective</div>
-          <p>A researched exploration of AI's 75-year evolution — from Turing's founding question to the modern generative AI era — identifying the pattern behind AI's cycles of hype, collapse, and breakthrough.</p>
+          <p>Developed to practice deep interviewing, structured AI prompt engineering, and AI system design by building a functional booking bot — moving from a human conversation to a constrained, queryable AI product.</p>
         </div>
         <div class="field">
           <div class="field-label">Process</div>
-          <p>Researched five major AI eras, identified the cause and effect behind two AI winters, and synthesized four original observations connecting theory, funding, and hardware across the full timeline.</p>
+          <p>Interviewed a teammate, drafted structured AI prompts for a TED-style introduction, built my own Speaker Profile, and — as part of the Bot Builders task force — compiled the team's profiles into a knowledge base with a system prompt constraining the bot to act only as a booking agent. Tested live against unscripted audience queries.</p>
         </div>
         <div class="img-row">
-          <img class="img-landscape" src="assets/timeline_infographic.svg" alt="Visual timeline of AI history from 1950 to present, showing five eras and four key takeaways" style="max-width:680px;">
+          <img class="img-portrait" src="assets/process_infographic_cleaned.png" alt="Project process infographic">
+          <img class="img-landscape" src="assets/Marketing_Infographic.png" alt="Speaker's Bureau marketing infographic">
+        </div>
+        <div class="field">
+          <div class="field-label">Speaker Profile — Vijay</div>
+          <p>Software developer, competitive athlete, and youth-sports advocate. Focused on encouraging young people to see sports as a tool for confidence, discipline, leadership, and resilience.</p>
+          <ul>
+            <li><strong>Keynote topics:</strong> The Power of Sports Beyond Competition · Lessons Sports Teach That Classrooms Cannot · Building Discipline, Resilience, and Leadership Through Sports</li>
+            <li><strong>Audience:</strong> Students · Educators · Youth organizations</li>
+            <li><strong>Style:</strong> Conversational, storytelling-driven, interactive</li>
+          </ul>
         </div>
         <div class="btn-row">
-          <a href="assets/Katupilla_Vijay_AI_History_Timeline_FIXED.pptx" class="btn">Download the full 11-slide deck</a>
+          <a href="https://creative-folks.ai.studio/" class="btn solid" target="_blank" rel="noopener">Try the Bot →</a>
         </div>
-        <div class="note">Sources: Bender &amp; Our World in Data (n.d.) · IEEE Computer Society (n.d.) · Putchuon (2024)</div>
         <div class="vp-inline">
           <div class="vp-row">
             <span class="vp-label">Value Proposition</span>
-            <p>Demonstrates the ability to synthesize a broad, unstructured body of research into an original, defensible argument rather than a simple timeline of facts.</p>
+            <p>Demonstrates the difference between casually prompting an AI and engineering a constrained AI system end-to-end, from a raw interview to a working, testable product.</p>
           </div>
           <div class="vp-row">
             <span class="vp-label">Target Audience</span>
-            <p>My instructor and classmates assessing research and synthesis skill; secondarily, anyone wanting a fast, opinionated history of AI.</p>
+            <p>My instructor evaluating applied AI/ML system-building skill; classmates interested in prompt engineering and AI product design.</p>
           </div>
         </div>
       </div>
@@ -414,44 +437,35 @@
     <div class="tab-panel" id="panel3" style="--accent-tab:var(--amber);">
       <div class="artifact" style="--accent:var(--amber);">
         <span class="tag">Artifact 03</span>
-        <h2>AI Lab: The Speaker's Bureau Bot</h2>
+        <h2>75 Years of AI: What the History Actually Teaches</h2>
         <div class="skill-row">
-          <span class="chip">Prompt Engineering</span>
-          <span class="chip">AI System Design</span>
-          <span class="chip">Product Testing</span>
+          <span class="chip">Research Synthesis</span>
+          <span class="chip">Historical Analysis</span>
+          <span class="chip">Technical Writing</span>
         </div>
         <div class="field">
           <div class="field-label">Objective</div>
-          <p>Developed to practice deep interviewing, structured AI prompt engineering, and AI system design by building a functional booking bot — moving from a human conversation to a constrained, queryable AI product.</p>
+          <p>A researched exploration of AI's 75-year evolution — from Turing's founding question to the modern generative AI era — identifying the pattern behind AI's cycles of hype, collapse, and breakthrough.</p>
         </div>
         <div class="field">
           <div class="field-label">Process</div>
-          <p>Interviewed a teammate, drafted structured AI prompts for a TED-style introduction, built my own Speaker Profile, and — as part of the Bot Builders task force — compiled the team's profiles into a knowledge base with a system prompt constraining the bot to act only as a booking agent. Tested live against unscripted audience queries.</p>
+          <p>Researched five major AI eras, identified the cause and effect behind two AI winters, and synthesized four original observations connecting theory, funding, and hardware across the full timeline.</p>
         </div>
         <div class="img-row">
-          <img class="img-portrait" src="assets/process_infographic_cleaned.png" alt="Project process infographic">
-          <img class="img-landscape" src="assets/Marketing_Infographic.png" alt="Speaker's Bureau marketing infographic">
-        </div>
-        <div class="field">
-          <div class="field-label">Speaker Profile — Vijay</div>
-          <p>Software developer, competitive athlete, and youth-sports advocate. Focused on encouraging young people to see sports as a tool for confidence, discipline, leadership, and resilience.</p>
-          <ul>
-            <li><strong>Keynote topics:</strong> The Power of Sports Beyond Competition · Lessons Sports Teach That Classrooms Cannot · Building Discipline, Resilience, and Leadership Through Sports</li>
-            <li><strong>Audience:</strong> Students · Educators · Youth organizations</li>
-            <li><strong>Style:</strong> Conversational, storytelling-driven, interactive</li>
-          </ul>
+          <img class="img-landscape" src="assets/timeline_infographic.svg" alt="Visual timeline of AI history from 1950 to present, showing five eras and four key takeaways" style="max-width:680px;">
         </div>
         <div class="btn-row">
-          <a href="https://creative-folks.ai.studio/" class="btn solid" target="_blank" rel="noopener">Try the Bot →</a>
+          <a href="assets/Katupilla_Vijay_AI_History_Timeline_FIXED.pptx" class="btn">Download the full 11-slide deck</a>
         </div>
+        <div class="note">Sources: Bender &amp; Our World in Data (n.d.) · IEEE Computer Society (n.d.) · Putchuon (2024)</div>
         <div class="vp-inline">
           <div class="vp-row">
             <span class="vp-label">Value Proposition</span>
-            <p>Demonstrates the difference between casually prompting an AI and engineering a constrained AI system end-to-end, from a raw interview to a working, testable product.</p>
+            <p>Demonstrates the ability to synthesize a broad, unstructured body of research into an original, defensible argument rather than a simple timeline of facts.</p>
           </div>
           <div class="vp-row">
             <span class="vp-label">Target Audience</span>
-            <p>My instructor evaluating applied AI/ML system-building skill; classmates interested in prompt engineering and AI product design.</p>
+            <p>My instructor and classmates assessing research and synthesis skill; secondarily, anyone wanting a fast, opinionated history of AI.</p>
           </div>
         </div>
       </div>
@@ -531,6 +545,10 @@
   <div class="testimonial-block">
     <p>In performance conversations, my engineering manager has described my work on our team's cloud migration and automation projects as dependable and clearly communicated, and has noted that I'm someone the team can rely on to work through ambiguous problems without losing momentum.</p>
     <span class="testimonial-source">— Paraphrased from feedback conversations with my engineering manager, not a direct quote</span>
+  </div>
+  <div class="testimonial-block">
+    <p>A teammate from the AI Lab group project mentioned that the system prompt I wrote for our booking bot was the piece that made the live demo actually hold up under unscripted questions, and that I was easy to hand ambiguous, half-defined tasks to during crunch.</p>
+    <span class="testimonial-source">— Paraphrased from a conversation with an AI Lab teammate, not a direct quote</span>
   </div>
 </section>
 
