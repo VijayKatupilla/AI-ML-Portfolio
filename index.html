@@ -374,8 +374,8 @@
     <div class="tab-buttons">
       <label for="tab1">Artifact 1 — AI Lab</label>
       <label for="tab2">Artifact 2 — AI vs. ML vs. DL</label>
-      <label for="tab3">Artifact 3 — AI/ML Timeline</label>
-      <label for="tab4">Artifact 4 — Self-Assessment</label>
+      <label for="tab3">Artifact 3 — Deep Learning &amp; Neural Networks</label>
+      <label for="tab4">Artifact 4 — AI/ML Timeline</label>
     </div>
 
     <div class="tab-panel" id="panel1" style="--accent-tab:var(--cyan);">
@@ -468,7 +468,49 @@
     <div class="tab-panel" id="panel3" style="--accent-tab:var(--amber);">
       <div class="artifact" style="--accent:var(--amber);">
         <span class="tag">Artifact 03</span>
-          <h2>75 Years of AI: What the History Actually Teaches</h2>
+          <h2>Neural Networks, Explained Simply</h2>
+        <div class="skill-row">
+          <span class="chip">Instructional Design</span>
+          <span class="chip">Strategic AI Prompting</span>
+          <span class="chip">Technical Accuracy Review</span>
+        </div>
+        <div class="field">
+          <div class="field-label">Objective</div>
+          <p>Built for a discussion assignment on communication in change leadership: apply deliberate communication-for-learning strategies — chunking, progressive disclosure, storytelling — while working with a generative AI to produce a genuinely simple explanation of neural networks, rather than accepting the AI's first draft.</p>
+        </div>
+        <div class="field">
+          <div class="field-label">Process</div>
+          <p>Studied the workshop's communication and information-presentation strategies, then prompted an AI to build a single sustained analogy — a relay race, where each runner's performance depends on the handoff from the runner before them — instead of several unrelated comparisons. Caught and corrected a real accuracy gap in an earlier draft: an independent-experts analogy made backpropagation sound like each layer corrects itself, when it actually corrects backward through the network in sequence, each layer's fix dependent on the one after it. Revised until the analogy held up to that follow-up question.</p>
+        </div>
+        <div class="field">
+          <div class="field-label">Tools</div>
+          <p>ChatGPT for creating the image, Claude (Anthropic) for drafting and iterating the explanation; course lesson material and IBM's neural network reference articles, used to verify the analogy's technical accuracy before publishing.</p>
+        </div>
+        <div class="img-row">
+          <img class="img-landscape" src="assets/dl_nn_infographic.png" alt="Diagram of a neural network's input, hidden, and output layers with connecting weights and a backpropagation arrow, plus schematics of CNN, RNN, and GAN architectures" style="max-width:680px;" onclick="openLightbox('assets/dl_nn_infographic.png')">
+        </div>
+        <div class="field">
+          <div class="field-label">The Explanation — A Relay Race</div>
+          <p>Four runners on a team, each taking the baton from the one before and running their leg. How well each runner does depends on their own speed and how clean the handoff was — a bad handoff slows even a fast runner. That combination is a neuron: it takes what it's handed, weighs it against its own ability, and passes something forward. Stack four legs like that and you've got layers, with the anchor runner's finish time as the final result.</p>
+          <p>Here's what makes it learning: the team loses, and the coach works backward from the finish line — was the anchor's slow finish their own pace, or a bad handoff from runner 3? Once she knows that, she can tell runner 3 exactly how much to improve. But to know if runner 3 ran their own leg well, she has to check whether they got a bad handoff from runner 2. The correction moves backward down the chain, and each runner's fix depends on the fix already worked out for the runner after them. That's backpropagation: the network traces the final error backward layer by layer, each correction calculated using the correction already figured out for the layer after it.</p>
+        </div>
+        <div class="vp-inline">
+          <div class="vp-row">
+            <span class="vp-label">Value Proposition</span>
+            <p>Demonstrates the ability to deliberately engineer AI output against communication theory rather than accepting a first draft, and to catch and correct a real technical accuracy gap in AI-generated content before publishing it.</p>
+          </div>
+          <div class="vp-row">
+            <span class="vp-label">Target Audience</span>
+            <p>My instructor evaluating communication-for-learning skill in an AI/ML context; classmates and change-leadership peers who need to explain technical AI concepts to non-technical stakeholders.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="panel4" style="--accent-tab:var(--green);">
+      <div class="artifact" style="--accent:var(--green);">
+        <span class="tag">Artifact 04</span>
+        <h2>75 Years of AI: What the History Actually Teaches</h2>
         <div class="skill-row">
           <span class="chip">Research Synthesis</span>
           <span class="chip">Historical Analysis</span>
@@ -501,75 +543,6 @@
           <div class="vp-row">
             <span class="vp-label">Target Audience</span>
             <p>My instructor and classmates assessing research and synthesis skill; secondarily, anyone wanting a fast, opinionated history of AI.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="tab-panel" id="panel4" style="--accent-tab:var(--green);">
-      <div class="artifact" style="--accent:var(--green);">
-        <span class="tag">Artifact 04</span>
-        <h2>Self-Assessment: AI/ML Leadership and Change Management</h2>
-        <div class="skill-row">
-          <span class="chip">Self-Evaluation</span>
-          <span class="chip">Change Leadership</span>
-          <span class="chip">Critical Analysis</span>
-        </div>
-        <div class="field">
-          <div class="field-label">Objective</div>
-          <p>An honest evaluation of my strengths and gaps across an AI/ML competency assessment and a change-management assessment, connected to a real leadership challenge from the CCL change-leadership framework.</p>
-        </div>
-        <div class="field">
-          <div class="field-label">Process</div>
-          <p>Cross-referenced assessment results against real project history rather than accepting scores at face value. Identified technical understanding, stakeholder communication, and ethical awareness as strengths — and named budget ownership, building training programs, and closing the feedback loop as genuine gaps. On change management, traced planning and communication strengths back to a software background, and identified sitting with ambiguity as the sharpest area to grow.</p>
-        </div>
-        <div class="field">
-          <div class="field-label">Tools</div>
-          <p>AI/ML self-assessment instrument, change-management assessment instrument, CCL (Center for Creative Leadership) article on change leadership, changestrategists.com framework on skill clustering, Grammarly — used to proofread the written reflection.</p>
-        </div>
-        <div class="field">
-          <div class="field-label">Strengths vs. growth areas</div>
-          <div class="pattern-grid">
-            <div class="pattern-col">
-              <h4>AI/ML Competency</h4>
-              <div class="pattern-sublabel">Strengths</div>
-              <div class="chip-row">
-                <span class="chip strength">Technical Understanding</span>
-                <span class="chip strength">Stakeholder Communication</span>
-                <span class="chip strength">Ethical Awareness</span>
-              </div>
-              <div class="pattern-sublabel">Growth areas</div>
-              <div class="chip-row">
-                <span class="chip growth">Budget &amp; Resource Management</span>
-                <span class="chip growth">Training Program Development</span>
-                <span class="chip growth">Feedback &amp; Impact Measurement</span>
-              </div>
-            </div>
-            <div class="pattern-col">
-              <h4>Change Management</h4>
-              <div class="pattern-sublabel">Strengths</div>
-              <div class="chip-row">
-                <span class="chip strength">Planning &amp; Organization</span>
-                <span class="chip strength">Communication</span>
-                <span class="chip strength">Problem-Solving</span>
-              </div>
-              <div class="pattern-sublabel">Growth areas</div>
-              <div class="chip-row">
-                <span class="chip growth">Sitting with Ambiguity</span>
-                <span class="chip growth">Leading Full Change Initiatives</span>
-                <span class="chip growth">Conflict Resolution</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="vp-inline">
-          <div class="vp-row">
-            <span class="vp-label">Value Proposition</span>
-            <p>Demonstrates a willingness to name real leadership and technical gaps precisely, and to critique the evaluation tools themselves rather than accept their output uncritically.</p>
-          </div>
-          <div class="vp-row">
-            <span class="vp-label">Target Audience</span>
-            <p>My instructor evaluating critical reflection and self-awareness; secondarily, a personal record for me to revisit later in the program.</p>
           </div>
         </div>
       </div>
