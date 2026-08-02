@@ -375,7 +375,7 @@
       <label for="tab1">Artifact 1 — AI Lab</label>
       <label for="tab2">Artifact 2 — AI vs. ML vs. DL</label>
       <label for="tab3">Artifact 3 — Deep Learning &amp; Neural Networks</label>
-      <label for="tab4">Artifact 4 — AI/ML Timeline</label>
+      <label for="tab4">Artifact 4 — Data Challenges in ML</label>
     </div>
 
     <div class="tab-panel" id="panel1" style="--accent-tab:var(--cyan);">
@@ -510,39 +510,39 @@
     <div class="tab-panel" id="panel4" style="--accent-tab:var(--green);">
       <div class="artifact" style="--accent:var(--green);">
         <span class="tag">Artifact 04</span>
-        <h2>75 Years of AI: What the History Actually Teaches</h2>
+        <h2>Data Challenges in Machine Learning</h2>
         <div class="skill-row">
-          <span class="chip">Research Synthesis</span>
-          <span class="chip">Historical Analysis</span>
-          <span class="chip">Technical Writing</span>
+          <span class="chip">Data Preprocessing</span>
+          <span class="chip">Applied Data Science</span>
+          <span class="chip">Technical Decision-Making</span>
         </div>
         <div class="field">
           <div class="field-label">Objective</div>
-          <p>A researched exploration of AI's 75-year evolution — from Turing's founding question to the modern generative AI era — identifying the pattern behind AI's cycles of hype, collapse, and breakthrough.</p>
+          <p>Applied core data-quality, class-imbalance, and data-drift concepts to realistic ML scenarios through an AI-coached activity, demonstrating practical judgment in choosing between competing data engineering techniques rather than reciting definitions.</p>
         </div>
         <div class="field">
           <div class="field-label">Process</div>
-          <p>Researched five major AI eras, identified the cause and effect behind two AI winters, and synthesized four original observations connecting theory, funding, and hardware across the full timeline.</p>
+          <p>Worked through three scenario-based problems with an AI coach — missing values in a customer dataset, severe class imbalance in a fraud detection dataset, and a housing-price model degrading in production months after deployment — reasoning through the tradeoffs of each available technique against the specifics of the scenario rather than defaulting to the first plausible answer.</p>
         </div>
         <div class="field">
           <div class="field-label">Tools</div>
-          <p>PowerPoint, Google Scholar and academic/industry sources (IEEE Computer Society, Our World in Data), Educational platforms and tutorials to better understand practical implementations, video research.</p>
+          <p>AI-coached scenario activity (SchoolAI), Claude (Anthropic) for infographic design.</p>
         </div>
         <div class="img-row">
-          <img class="img-landscape" src="assets/timeline_infographic.svg" alt="Visual timeline of AI history from 1950 to present, showing five eras and four key takeaways" style="max-width:680px;" onclick="openLightbox('assets/timeline_infographic.svg')">
+          <img class="img-landscape" src="assets/data_challenges_infographic.png" alt="Infographic comparing missing-data techniques, class-imbalance techniques, and data-drift monitoring signals across three columns" style="max-width:680px;" onclick="openLightbox('assets/data_challenges_infographic.png')">
         </div>
-        <div class="btn-row">
-          <a href="assets/Katupilla_Vijay_AI_History_Timeline_FIXED.pptx" class="btn">Download the full 11-slide deck</a>
+        <div class="field">
+          <div class="field-label">Scenario 3 — Data Drift</div>
+          <p>A housing-price model performed perfectly in testing, then started consistently underestimating prices months after deployment — with no code or data-format changes. The cause wasn't a bug; it was data drift, the real-world relationship between features and price shifting after training ended, while the model stayed frozen in the past. The fix isn't a one-time patch but ongoing monitoring: tracking Prediction Distribution Shift (the model's average output over time — a sudden change signals something's off before the real answer is even known) versus Feature Drift (watching the input data itself, like average square footage, for meaningful shifts). Between the two, prediction distribution shift is the more direct early warning, since it flags a problem immediately rather than waiting to notice a shift in the inputs first.</p>
         </div>
-        <div class="note">Sources: Bender &amp; Our World in Data (n.d.) · IEEE Computer Society (n.d.) · Putchuon (2024)</div>
         <div class="vp-inline">
           <div class="vp-row">
             <span class="vp-label">Value Proposition</span>
-            <p>Demonstrates the ability to synthesize a broad, unstructured body of research into an original, defensible argument rather than a simple timeline of facts.</p>
+            <p>Demonstrates applied data science judgment — weighing competing techniques against real constraints like data volume, feature importance, and severity of imbalance, instead of just naming the relevant vocabulary.</p>
           </div>
           <div class="vp-row">
             <span class="vp-label">Target Audience</span>
-            <p>My instructor and classmates assessing research and synthesis skill; secondarily, anyone wanting a fast, opinionated history of AI.</p>
+            <p>My instructor evaluating applied data preprocessing competency; classmates curious about the practical tradeoffs behind common data-challenge techniques.</p>
           </div>
         </div>
       </div>
