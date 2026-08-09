@@ -13,107 +13,42 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#120E1A;
-    --bg-panel:#1B1526;
-    --bg-panel-2:#221A30;
-    --border:#33294A;
-    --text:#F3EFFA;
-    --text-dim:#9C8FB5;
-    --amber:#F5A623;
-    --cyan:#2DD4E8;
-    --green:#4ADE80;
-    --purple:#B794F6;
-    --maroon:#E85D75;
-    --on-accent:#120E1A;
+    --bg:#120E1A; --bg-panel:#1B1526; --bg-panel-2:#221A30; --border:#33294A;
+    --text:#F3EFFA; --text-dim:#9C8FB5; --amber:#F5A623; --cyan:#2DD4E8;
+    --green:#4ADE80; --purple:#B794F6; --maroon:#E85D75; --on-accent:#120E1A;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{ scroll-behavior:smooth; }
-  body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:'Inter',sans-serif;
-    line-height:1.65;
-  }
+  body{ background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; line-height:1.65; }
   h1,h2,h3,.mono{ font-family:'JetBrains Mono',monospace; }
   a{ color:inherit; }
 
-  /* NAV */
-  nav{
-    position:sticky; top:0; z-index:50;
-    display:flex; gap:1.8rem; align-items:center;
-    padding:1.1rem 2rem;
-    background:rgba(18,14,26,0.82);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--border);
-    font-family:'JetBrains Mono',monospace;
-    font-size:0.82rem;
-    overflow-x:auto; white-space:nowrap;
-  }
+  nav{ position:sticky; top:0; z-index:50; display:flex; gap:1.8rem; align-items:center; padding:1.1rem 2rem; background:rgba(18,14,26,0.88); backdrop-filter:blur(10px); border-bottom:1px solid var(--border); font-family:'JetBrains Mono',monospace; font-size:0.82rem; overflow-x:auto; white-space:nowrap; }
   nav .brand{ color:var(--amber); font-weight:700; margin-right:auto; letter-spacing:0.02em; }
   nav a{ color:var(--text-dim); text-decoration:none; transition:color .15s; }
   nav a:hover{ color:var(--text); }
 
   section{ padding:5.5rem 2rem; max-width:960px; margin:0 auto; }
-  .eyebrow{
-    font-family:'JetBrains Mono',monospace; font-size:0.78rem;
-    letter-spacing:0.12em; text-transform:uppercase;
-    display:block; margin-bottom:1rem;
-  }
+  .eyebrow{ font-family:'JetBrains Mono',monospace; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; display:block; margin-bottom:1rem; }
 
-  /* HERO */
-  #home{ padding-top:5rem; padding-bottom:3.5rem; }
+  #home{ position:relative; overflow:hidden; padding-top:5rem; padding-bottom:3.5rem; }
+  #home::before{ content:''; position:absolute; top:-120px; left:-100px; width:480px; height:480px; border-radius:50%; background:radial-gradient(circle, rgba(245,166,35,0.22), rgba(183,148,246,0.16) 55%, transparent 75%); filter:blur(10px); pointer-events:none; z-index:0; }
+  .hero, .hero *{ position:relative; z-index:1; }
   .hero{ display:flex; gap:3rem; align-items:center; flex-wrap:wrap; }
-  .hero img{
-    width:172px; height:172px; border-radius:50%;
-    object-fit:cover; border:3px solid var(--maroon);
-    flex-shrink:0;
-  }
+  .hero img{ width:172px; height:172px; border-radius:50%; object-fit:cover; border:3px solid var(--maroon); flex-shrink:0; }
   .hero-copy{ flex:1; min-width:280px; }
   .eyebrow.hero-eyebrow{ color:var(--cyan); }
-  #home{ position:relative; overflow:hidden; }
-  #home::before{
-    content:''; position:absolute; top:-120px; left:-100px;
-    width:480px; height:480px; border-radius:50%;
-    background:radial-gradient(circle, rgba(245,166,35,0.22), rgba(183,148,246,0.16) 55%, transparent 75%);
-    filter:blur(10px); pointer-events:none; z-index:0;
-  }
-  .hero, .hero *{ position:relative; z-index:1; }
-  h1{
-    font-size:2.5rem; margin-bottom:0.7rem;
-    background:linear-gradient(90deg, var(--amber), var(--purple));
-    -webkit-background-clip:text; background-clip:text; color:transparent;
-  }
+  h1{ font-size:2.5rem; margin-bottom:0.7rem; background:linear-gradient(90deg, var(--amber), var(--purple)); -webkit-background-clip:text; background-clip:text; color:transparent; }
   .hero-copy p{ color:var(--text-dim); font-size:1.05rem; max-width:56ch; }
   .btn-row{ display:flex; gap:0.8rem; margin-top:1.6rem; flex-wrap:wrap; }
-  .btn{
-    display:inline-block; padding:0.65rem 1.3rem;
-    border:1px solid var(--amber); color:var(--amber);
-    font-family:'JetBrains Mono',monospace; font-size:0.83rem;
-    text-decoration:none; border-radius:6px;
-    transition:background .15s, color .15s;
-  }
-  .btn:hover{ background:var(--amber); color:var(--on-accent); font-weight:600; }
+  .btn{ display:inline-block; padding:0.65rem 1.3rem; border:1px solid var(--amber); color:var(--amber); font-family:'JetBrains Mono',monospace; font-size:0.83rem; text-decoration:none; border-radius:6px; transition:background .15s, color .15s; }
+  .btn:hover{ background:var(--amber); color:var(--on-accent); }
   .btn.solid{ background:var(--amber); color:var(--on-accent); }
   .btn.solid:hover{ opacity:0.85; }
 
-  /* CHIPS */
   .chip-row{ display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1.3rem; }
-  .chip{
-    font-family:'JetBrains Mono',monospace; font-size:0.74rem;
-    padding:0.3rem 0.7rem; border-radius:999px;
-    background:var(--bg-panel); border:1px solid var(--border);
-    color:var(--text-dim);
-  }
-  .chip.strength{ background:rgba(74,222,128,0.12); border-color:var(--green); color:var(--green); }
-  .chip.growth{ background:rgba(245,166,35,0.12); border-color:var(--amber); color:var(--amber); }
+  .chip{ font-family:'JetBrains Mono',monospace; font-size:0.74rem; padding:0.3rem 0.7rem; border-radius:999px; background:var(--bg-panel); border:1px solid var(--border); color:var(--text-dim); }
 
-  .pattern-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.6rem; margin-top:1.2rem; }
-  .pattern-col{ padding:1.2rem; background:var(--bg-panel-2); border:1px solid var(--border); border-radius:8px; }
-  .pattern-col h4{ font-size:0.85rem; margin-bottom:0.8rem; }
-  .pattern-sublabel{ font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-dim); margin:0.7rem 0 0.4rem; }
-  @media(max-width:640px){ .pattern-grid{ grid-template-columns:1fr; } }
-
-  /* VALUE PROP */
   #value-prop{ border-top:1px solid var(--border); }
   #value-prop .eyebrow{ color:var(--maroon); }
   .vp-grid{ display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-top:1.5rem; }
@@ -122,23 +57,16 @@
   .vp-block p{ color:var(--text); font-size:0.95rem; }
   @media(max-width:640px){ .vp-grid{ grid-template-columns:1fr; } }
 
-  /* ABOUT */
   #about{ border-top:1px solid var(--border); }
   #about .eyebrow{ color:var(--cyan); }
   #about h2{ font-size:1.9rem; margin-bottom:1.3rem; }
   #about p{ color:var(--text-dim); max-width:66ch; margin-bottom:1.1rem; }
   .now-list{ list-style:none; margin:1.6rem 0; display:flex; flex-direction:column; gap:0.6rem; }
   .now-list li{ display:flex; gap:0.7rem; align-items:baseline; color:var(--text); font-size:0.96rem; }
-  .now-list .dot{
-    font-family:'JetBrains Mono',monospace; color:var(--amber); flex-shrink:0;
-  }
+  .now-list .dot{ font-family:'JetBrains Mono',monospace; color:var(--amber); flex-shrink:0; }
   .stack-group{ margin-top:1.8rem; }
-  .stack-group h3{
-    font-size:0.78rem; text-transform:uppercase; letter-spacing:0.1em;
-    color:var(--text-dim); margin-bottom:0.6rem; font-weight:500;
-  }
+  .stack-group h3{ font-size:0.78rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-dim); margin-bottom:0.6rem; font-weight:500; }
 
-  /* ARTIFACTS: tabbed selector */
   #artifacts{ border-top:1px solid var(--border); }
   #artifacts .eyebrow{ color:var(--purple); }
   #artifacts > h2{ font-size:1.9rem; }
@@ -146,123 +74,56 @@
 
   .tabs input[type="radio"]{ position:absolute; opacity:0; pointer-events:none; }
   .tab-buttons{ display:flex; gap:0.6rem; flex-wrap:wrap; margin:2rem 0 0; }
-  .tab-buttons label{
-    cursor:pointer; padding:0.6rem 1.1rem; border-radius:6px;
-    border:1px solid var(--border); background:var(--bg-panel);
-    font-family:'JetBrains Mono',monospace; font-size:0.8rem; color:var(--text-dim);
-    transition:border-color .15s, color .15s;
-  }
+  .tab-buttons label{ cursor:pointer; padding:0.6rem 1.1rem; border-radius:6px; border:1px solid var(--border); background:var(--bg-panel); font-family:'JetBrains Mono',monospace; font-size:0.8rem; color:var(--text-dim); transition:border-color .15s, color .15s; }
   .tab-buttons label:hover{ color:var(--text); }
 
   #tab1:checked ~ .tab-buttons label[for="tab1"],
   #tab2:checked ~ .tab-buttons label[for="tab2"],
   #tab3:checked ~ .tab-buttons label[for="tab3"],
-  #tab4:checked ~ .tab-buttons label[for="tab4"]{
-    color:var(--on-accent); background:var(--accent-tab,var(--amber)); border-color:var(--accent-tab,var(--amber));
-  }
+  #tab4:checked ~ .tab-buttons label[for="tab4"]{ color:var(--on-accent); background:var(--accent-tab,var(--amber)); border-color:var(--accent-tab,var(--amber)); }
 
   .tab-panel{ display:none; padding-top:2.5rem; --accent:var(--accent-tab,var(--amber)); }
-  #tab1:checked ~ #panel1,
-  #tab2:checked ~ #panel2,
-  #tab3:checked ~ #panel3,
-  #tab4:checked ~ #panel4{ display:block; }
+  #tab1:checked ~ #panel1, #tab2:checked ~ #panel2, #tab3:checked ~ #panel3, #tab4:checked ~ #panel4{ display:block; }
 
-  .artifact .tag{
-    font-family:'JetBrains Mono',monospace; font-size:0.72rem;
-    color:var(--accent,var(--amber)); text-transform:uppercase; letter-spacing:0.08em;
-  }
+  .artifact .tag{ font-family:'JetBrains Mono',monospace; font-size:0.72rem; color:var(--accent,var(--amber)); text-transform:uppercase; letter-spacing:0.08em; }
   .artifact h2{ font-size:1.55rem; margin:0.4rem 0 0.2rem; }
-  .vp-inline{
-    margin-top:1.4rem; padding:1.1rem 1.3rem;
-    background:var(--bg-panel-2); border-left:3px solid var(--accent,var(--amber));
-    border-radius:0 8px 8px 0;
-  }
-  .vp-inline .vp-row{ margin-bottom:0.7rem; }
-  .vp-inline .vp-row:last-child{ margin-bottom:0; }
-  .vp-inline .vp-label{
-    font-family:'JetBrains Mono',monospace; font-size:0.7rem; text-transform:uppercase;
-    letter-spacing:0.06em; color:var(--accent,var(--amber)); margin-bottom:0.2rem; display:block;
-  }
-  .vp-inline p{ color:var(--text); font-size:0.92rem; }
   .skill-row{ display:flex; flex-wrap:wrap; gap:0.5rem; margin:0.9rem 0 0.3rem; }
   .skill-row .chip{ border-color:var(--accent,var(--border)); color:var(--text); }
   .field{ margin-top:1.2rem; }
-  .field-label{
-    font-family:'JetBrains Mono',monospace; font-size:0.75rem;
-    color:var(--text-dim); text-transform:uppercase; letter-spacing:0.06em;
-    margin-bottom:0.35rem;
-  }
+  .field-label{ font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.35rem; }
   .field p{ color:var(--text); font-size:0.98rem; }
   .field ul{ padding-left:1.2rem; color:var(--text); }
   .field ul li{ margin-bottom:0.4rem; }
   .img-row{ display:flex; gap:1.5rem; margin-top:1.5rem; flex-wrap:wrap; align-items:flex-start; }
-  .img-row img{ height:auto; border-radius:10px; border:1px solid var(--border); box-shadow:0 4px 16px rgba(28,27,31,0.10); }
+  .img-row img{ height:auto; border-radius:10px; border:1px solid var(--border); box-shadow:0 4px 16px rgba(0,0,0,0.35); cursor:zoom-in; transition:opacity .15s; }
+  .img-row img:hover{ opacity:0.88; }
   .img-row .img-portrait{ width:100%; max-width:340px; }
   .img-row .img-landscape{ width:100%; max-width:560px; }
-  .note{
-    margin-top:1.3rem; padding:0.8rem 1rem;
-    background:var(--bg-panel); border:1px solid var(--border);
-    border-radius:6px; font-size:0.85rem; color:var(--text-dim);
-  }
 
-  /* TESTIMONIALS */
+  .vp-split{ display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin-top:0.9rem; }
+  .vp-split-block{ padding:1.1rem 1.3rem; background:var(--bg-panel-2); border-left:3px solid var(--accent,var(--amber)); border-radius:0 8px 8px 0; }
+  .vp-split-block .vp-label{ font-family:'JetBrains Mono',monospace; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--accent,var(--amber)); margin-bottom:0.3rem; display:block; }
+  .vp-split-block p{ color:var(--text); font-size:0.92rem; }
+  @media(max-width:640px){ .vp-split{ grid-template-columns:1fr; } }
+
   #testimonials{ border-top:1px solid var(--border); }
   #testimonials .eyebrow{ color:var(--purple); }
-  .testimonial-block{
-    margin-top:1.4rem; padding:1.4rem 1.6rem;
-    background:var(--bg-panel); border-left:3px solid var(--purple);
-    border-radius:0 8px 8px 0;
-  }
+  .testimonial-block{ margin-top:1.4rem; padding:1.4rem 1.6rem; background:var(--bg-panel); border-left:3px solid var(--purple); border-radius:0 8px 8px 0; }
   .testimonial-block p{ color:var(--text); font-size:0.98rem; font-style:italic; }
-  .testimonial-source{
-    display:block; margin-top:0.8rem; font-family:'JetBrains Mono',monospace;
-    font-size:0.78rem; color:var(--text-dim); font-style:normal;
-  }
 
-  /* CONNECT */
   #connect{ border-top:1px solid var(--border); text-align:left; }
   #connect .eyebrow{ color:var(--green); }
   #connect h2{ font-size:1.9rem; margin-bottom:0.8rem; }
   #connect p{ color:var(--text-dim); max-width:60ch; margin-bottom:1.6rem; }
   .connect-links{ display:flex; gap:0.9rem; flex-wrap:wrap; }
-  .connect-links a{
-    font-family:'JetBrains Mono',monospace; font-size:0.85rem;
-    padding:0.6rem 1.1rem; border:1px solid var(--border); border-radius:6px;
-    text-decoration:none; color:var(--text); transition:border-color .15s, color .15s;
-  }
+  .connect-links a{ font-family:'JetBrains Mono',monospace; font-size:0.85rem; padding:0.6rem 1.1rem; border:1px solid var(--border); border-radius:6px; text-decoration:none; color:var(--text); transition:border-color .15s, color .15s; }
   .connect-links a:hover{ border-color:var(--green); color:var(--green); }
 
-  .img-row img{ cursor:zoom-in; transition:opacity .15s; }
-  .img-row img:hover{ opacity:0.88; }
-  #lightbox-overlay{
-    display:none; position:fixed; inset:0; z-index:200;
-    background:rgba(10,7,15,0.92); backdrop-filter:blur(4px);
-    align-items:center; justify-content:center; padding:3rem; cursor:zoom-out;
-  }
-  #lightbox-overlay img{
-    max-width:min(1200px, 92vw); max-height:88vh;
-    border-radius:10px; box-shadow:0 12px 40px rgba(0,0,0,0.5);
-  }
-  #lightbox-close{
-    position:absolute; top:1.5rem; right:2rem;
-    font-family:'JetBrains Mono',monospace; font-size:0.9rem;
-    color:var(--text); background:var(--bg-panel); border:1px solid var(--border);
-    padding:0.5rem 0.9rem; border-radius:6px; cursor:pointer;
-  }
+  footer{ text-align:center; padding:2.6rem 2rem; color:var(--text-dim); font-family:'JetBrains Mono',monospace; font-size:0.78rem; border-top:1px solid var(--border); }
 
-  footer{
-    text-align:center; padding:2.6rem 2rem;
-    color:var(--text-dim); font-family:'JetBrains Mono',monospace; font-size:0.78rem;
-    border-top:1px solid var(--border);
-  }
-
-  @media(max-width:600px){
-    .hero{ flex-direction:column; text-align:center; align-items:center; }
-    .hero-copy p{ max-width:none; }
-    .btn-row, .chip-row{ justify-content:center; }
-    section{ padding:3.5rem 1.2rem; }
-    nav{ gap:1.1rem; padding:1rem; }
-  }
+  #lightbox-overlay{ display:none; position:fixed; inset:0; z-index:200; background:rgba(10,7,15,0.92); backdrop-filter:blur(4px); align-items:center; justify-content:center; padding:3rem; cursor:zoom-out; }
+  #lightbox-overlay img{ max-width:min(1200px, 92vw); max-height:88vh; border-radius:10px; box-shadow:0 12px 40px rgba(0,0,0,0.5); }
+  #lightbox-close{ position:absolute; top:1.5rem; right:2rem; font-family:'JetBrains Mono',monospace; font-size:0.9rem; color:var(--text); background:var(--bg-panel); border:1px solid var(--border); padding:0.5rem 0.9rem; border-radius:6px; cursor:pointer; }
 
   @media print{
     body{ background:#FFFFFF !important; color:#111111 !important; }
@@ -270,11 +131,16 @@
     section{ padding:1rem 0 !important; max-width:100% !important; }
     .tab-panel{ display:block !important; page-break-after:always; }
     h1{ -webkit-text-fill-color:#111111 !important; background:none !important; color:#111111 !important; }
-    .chip, .vp-inline, .note, .panel, .pattern-col, .testimonial-block{
-      background:#F3F3F3 !important; color:#111111 !important; border-color:#CCCCCC !important;
-    }
+    .chip, .vp-block, .vp-split-block, .testimonial-block{ background:#F3F3F3 !important; color:#111111 !important; border-color:#CCCCCC !important; }
     a{ color:#111111 !important; text-decoration:underline !important; }
     #home::before{ display:none !important; }
+  }
+  @media(max-width:600px){
+    .hero{ flex-direction:column; text-align:center; align-items:center; }
+    .hero-copy p{ max-width:none; }
+    .btn-row, .chip-row{ justify-content:center; }
+    section{ padding:3.5rem 1.2rem; }
+    nav{ gap:1.1rem; padding:1rem; }
   }
 </style>
 </head>
@@ -283,6 +149,7 @@
 <nav>
   <span class="brand">VK://</span>
   <a href="#home">Home</a>
+  <a href="#value-prop">Value</a>
   <a href="#about">About</a>
   <a href="#artifacts">Artifacts</a>
   <a href="#testimonials">Testimonials</a>
@@ -304,8 +171,22 @@
   </div>
 </section>
 
+<section id="value-prop">
+  <span class="eyebrow">// personal value proposition &amp; audience</span>
+  <div class="vp-grid">
+    <div class="vp-block">
+      <h3>Personal Value Proposition</h3>
+      <p>I help bridge cloud engineering and applied AI. This portfolio proves I can research a field, build a working AI product end-to-end, and communicate technical AI/ML concepts clearly to both technical and non-technical audiences — not just write code that works.</p>
+    </div>
+    <div class="vp-block">
+      <h3>Target Audience</h3>
+      <p>Primarily my AIML-500 instructor and classmates evaluating this coursework; secondarily, engineering peers interested in a practical, in-progress transition from cloud engineering into applied AI. This portfolio is relevant to them because every artifact is built to demonstrate a specific, named competency rather than just document that an assignment was completed.</p>
+    </div>
+  </div>
+</section>
+
 <section id="about">
-  <span class="eyebrow">// about</span>
+  <span class="eyebrow">// about — professional bio</span>
   <h2>Where engineering meets applied AI</h2>
   <p>I combine a full-stack and cloud engineering background — containerized microservices, workflow automation, distributed systems — with a growing focus on applied AI: prompt engineering, retrieval-augmented systems, and multi-agent tools. The artifacts below trace that shift directly: a researched history of how AI got here, a hands-on AI Lab project where I engineered prompts and a constrained booking bot from scratch, and an honest self-assessment of where my leadership skills need to grow to manage AI transitions, not just build them.</p>
 
@@ -325,37 +206,23 @@
   <div class="stack-group">
     <h3>Core engineering</h3>
     <div class="chip-row">
-      <span class="chip">Java</span>
-      <span class="chip">Spring Boot</span>
-      <span class="chip">Python</span>
-      <span class="chip">React</span>
-      <span class="chip">AWS</span>
-      <span class="chip">Docker</span>
-      <span class="chip">Kubernetes</span>
-      <span class="chip">PostgreSQL</span>
+      <span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">Python</span><span class="chip">React</span>
+      <span class="chip">AWS</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">PostgreSQL</span>
     </div>
   </div>
   <div class="stack-group">
     <h3>Currently learning — AI/ML</h3>
     <div class="chip-row">
-      <span class="chip">LangChain</span>
-      <span class="chip">OpenAI API</span>
-      <span class="chip">TensorFlow</span>
-      <span class="chip">scikit-learn</span>
-      <span class="chip">Prompt Engineering</span>
+      <span class="chip">LangChain</span><span class="chip">OpenAI API</span><span class="chip">TensorFlow</span>
+      <span class="chip">scikit-learn</span><span class="chip">Prompt Engineering</span>
     </div>
   </div>
   <div class="stack-group">
     <h3>Skills demonstrated across this portfolio</h3>
     <div class="chip-row">
-      <span class="chip">Research Synthesis</span>
-      <span class="chip">Historical Analysis</span>
-      <span class="chip">Technical Writing</span>
-      <span class="chip">AI System Design</span>
-      <span class="chip">Product Testing</span>
-      <span class="chip">Self-Evaluation</span>
-      <span class="chip">Change Leadership</span>
-      <span class="chip">Critical Analysis</span>
+      <span class="chip">Research Synthesis</span><span class="chip">Historical Analysis</span><span class="chip">Technical Writing</span>
+      <span class="chip">AI System Design</span><span class="chip">Product Testing</span><span class="chip">Self-Evaluation</span>
+      <span class="chip">Change Leadership</span><span class="chip">Critical Analysis</span>
     </div>
   </div>
 </section>
@@ -378,14 +245,18 @@
       <label for="tab4">Artifact 4 — Data Challenges in ML</label>
     </div>
 
-    <div class="tab-panel" id="panel1" style="--accent-tab:var(--cyan);">
-      <div class="artifact" style="--accent:var(--cyan);">
+    <div class="tab-panel" id="panel1" style="--accent-tab:var(--amber);">
+      <div class="artifact" style="--accent:var(--amber);">
         <span class="tag">Artifact 01</span>
-         <h2>AI Lab: The Speaker's Bureau Bot</h2>
+        <h2>AI Lab: The Speaker's Bureau Bot</h2>
         <div class="skill-row">
           <span class="chip">Prompt Engineering</span>
           <span class="chip">AI System Design</span>
           <span class="chip">Product Testing</span>
+        </div>
+        <div class="field">
+          <div class="field-label">Introduction</div>
+          <p>This artifact is a group AI Lab project in which I helped design and build a working AI booking bot for a peer "speaker's bureau," moving from a live interview to a constrained, testable AI product.</p>
         </div>
         <div class="field">
           <div class="field-label">Objective</div>
@@ -396,9 +267,9 @@
           <p>Interviewed a teammate, drafted structured AI prompts for a TED-style introduction, built my own Speaker Profile, and — as part of the Bot Builders task force — compiled the team's profiles into a knowledge base with a system prompt constraining the bot to act only as a booking agent. Tested live against unscripted audience queries.</p>
         </div>
         <div class="field">
-          <div class="field-label">Tools</div>
+          <div class="field-label">Tools and Tech Used</div>
           <p>Google AI Studio (bot platform), an AI assistant for prompt drafting and iteration, AI design tools (Chat GPT) for infographic creation, Python/image editing — used to remove corrupted AI-generated text from the process infographic before publishing, structured peer-interview methodology.</p>
-          </div>
+        </div>
         <div class="img-row">
           <img class="img-portrait" src="assets/process_infographic_cleaned.png" alt="Project process infographic" onclick="openLightbox('assets/process_infographic_cleaned.png')">
           <img class="img-landscape" src="assets/Marketing_Infographic.png" alt="Speaker's Bureau marketing infographic" onclick="openLightbox('assets/Marketing_Infographic.png')">
@@ -415,15 +286,22 @@
         <div class="btn-row">
           <a href="https://creative-folks.ai.studio/" class="btn solid" target="_blank" rel="noopener">Try the Bot →</a>
         </div>
-        <div class="vp-inline">
-          <div class="vp-row">
-            <span class="vp-label">Value Proposition</span>
-            <p>Demonstrates the difference between casually prompting an AI and engineering a constrained AI system end-to-end, from a raw interview to a working, testable product.</p>
+        <div class="field">
+          <div class="field-label">Value Proposition of the Artifact</div>
+          <div class="vp-split">
+            <div class="vp-split-block">
+              <span class="vp-label">Unique Value</span>
+              <p>Demonstrates the difference between casually prompting an AI and engineering a constrained AI system end-to-end, from a raw interview to a working, testable product.</p>
+            </div>
+            <div class="vp-split-block">
+              <span class="vp-label">Relevance</span>
+              <p>My instructor evaluating applied AI/ML system-building skill; classmates interested in prompt engineering and AI product design.</p>
+            </div>
           </div>
-          <div class="vp-row">
-            <span class="vp-label">Target Audience</span>
-            <p>My instructor evaluating applied AI/ML system-building skill; classmates interested in prompt engineering and AI product design.</p>
-          </div>
+        </div>
+        <div class="field">
+          <div class="field-label">References</div>
+          <p>N/A — original team-produced coursework; no external sources cited.</p>
         </div>
       </div>
     </div>
@@ -438,6 +316,10 @@
           <span class="chip">Technical Simplification</span>
         </div>
         <div class="field">
+          <div class="field-label">Introduction</div>
+          <p>This artifact is an original infographic I built to explain how artificial intelligence, machine learning, and deep learning relate to one another, and to break down the three core types of machine learning.</p>
+        </div>
+        <div class="field">
           <div class="field-label">Objective</div>
           <p>Built to clarify how artificial intelligence, machine learning, and deep learning relate to one another, and to break down the three core types of machine learning before applying these concepts in later coursework.</p>
         </div>
@@ -446,33 +328,44 @@
           <p>Researched the nested relationship between AI, ML, and deep learning, then designed an infographic showing that relationship alongside the three primary learning paradigms — supervised, unsupervised, and reinforcement learning — each grounded in a concrete, real-world example rather than an abstract definition.</p>
         </div>
         <div class="field">
-          <div class="field-label">Tools</div>
-          <p>Online technical articels which are helped to match real-world examples, Claude (Anthropic) was used to generate the SVG graphic itself, based on my research and specific content direction. Concept, structure, and examples are mine; Claude executed the visual design.</p>
+          <div class="field-label">Tools and Tech Used</div>
+          <p>Online technical articles that helped match real-world examples, Claude (Anthropic) was used to generate the SVG graphic itself, based on my research and specific content direction. Concept, structure, and examples are mine; Claude executed the visual design.</p>
         </div>
         <div class="img-row">
           <img class="img-landscape" src="assets/ai_ml_dl_infographic.svg" alt="Infographic showing the nested relationship between AI, ML, and deep learning, and the three types of machine learning" style="max-width:640px;" onclick="openLightbox('assets/ai_ml_dl_infographic.svg')">
         </div>
-        <div class="vp-inline">
-          <div class="vp-row">
-            <span class="vp-label">Value Proposition</span>
-            <p>Demonstrates the ability to translate technical AI/ML concepts into something a non-technical audience can grasp quickly — the same skill required when explaining AI systems to stakeholders outside engineering.</p>
+        <div class="field">
+          <div class="field-label">Value Proposition of the Artifact</div>
+          <div class="vp-split">
+            <div class="vp-split-block">
+              <span class="vp-label">Unique Value</span>
+              <p>Demonstrates the ability to translate technical AI/ML concepts into something a non-technical audience can grasp quickly — the same skill required when explaining AI systems to stakeholders outside engineering.</p>
+            </div>
+            <div class="vp-split-block">
+              <span class="vp-label">Relevance</span>
+              <p>My instructor evaluating conceptual understanding; secondarily, classmates or newcomers wanting a fast visual orientation to the field.</p>
+            </div>
           </div>
-          <div class="vp-row">
-            <span class="vp-label">Target Audience</span>
-            <p>My instructor evaluating conceptual understanding; secondarily, classmates or newcomers wanting a fast visual orientation to the field.</p>
-          </div>
+        </div>
+        <div class="field">
+          <div class="field-label">References</div>
+          <p>N/A — general technical references were consulted during research; no single external source is directly cited in the final graphic.</p>
         </div>
       </div>
     </div>
 
-    <div class="tab-panel" id="panel3" style="--accent-tab:var(--amber);">
-      <div class="artifact" style="--accent:var(--amber);">
+    <div class="tab-panel" id="panel3" style="--accent-tab:var(--maroon);">
+      <div class="artifact" style="--accent:var(--maroon);">
         <span class="tag">Artifact 03</span>
-          <h2>Neural Networks, Explained Simply</h2>
+        <h2>Neural Networks, Explained Simply</h2>
         <div class="skill-row">
           <span class="chip">Instructional Design</span>
           <span class="chip">Strategic AI Prompting</span>
           <span class="chip">Technical Accuracy Review</span>
+        </div>
+        <div class="field">
+          <div class="field-label">Introduction</div>
+          <p>This artifact is a discussion-assignment explanation of neural networks, built by deliberately applying communication-for-learning strategies while working with a generative AI, rather than accepting its first draft.</p>
         </div>
         <div class="field">
           <div class="field-label">Objective</div>
@@ -483,7 +376,7 @@
           <p>Studied the workshop's communication and information-presentation strategies, then prompted an AI to build a single sustained analogy — a relay race, where each runner's performance depends on the handoff from the runner before them — instead of several unrelated comparisons. Caught and corrected a real accuracy gap in an earlier draft: an independent-experts analogy made backpropagation sound like each layer corrects itself, when it actually corrects backward through the network in sequence, each layer's fix dependent on the one after it. Revised until the analogy held up to that follow-up question.</p>
         </div>
         <div class="field">
-          <div class="field-label">Tools</div>
+          <div class="field-label">Tools and Tech Used</div>
           <p>ChatGPT for creating the image, Claude (Anthropic) for drafting and iterating the explanation; course lesson material and IBM's neural network reference articles, used to verify the analogy's technical accuracy before publishing.</p>
         </div>
         <div class="img-row">
@@ -494,15 +387,23 @@
           <p>Four runners on a team, each taking the baton from the one before and running their leg. How well each runner does depends on their own speed and how clean the handoff was — a bad handoff slows even a fast runner. That combination is a neuron: it takes what it's handed, weighs it against its own ability, and passes something forward. Stack four legs like that and you've got layers, with the anchor runner's finish time as the final result.</p>
           <p>Here's what makes it learning: the team loses, and the coach works backward from the finish line — was the anchor's slow finish their own pace, or a bad handoff from runner 3? Once she knows that, she can tell runner 3 exactly how much to improve. But to know if runner 3 ran their own leg well, she has to check whether they got a bad handoff from runner 2. The correction moves backward down the chain, and each runner's fix depends on the fix already worked out for the runner after them. That's backpropagation: the network traces the final error backward layer by layer, each correction calculated using the correction already figured out for the layer after it.</p>
         </div>
-        <div class="vp-inline">
-          <div class="vp-row">
-            <span class="vp-label">Value Proposition</span>
-            <p>Demonstrates the ability to deliberately engineer AI output against communication theory rather than accepting a first draft, and to catch and correct a real technical accuracy gap in AI-generated content before publishing it.</p>
+        <div class="field">
+          <div class="field-label">Value Proposition of the Artifact</div>
+          <div class="vp-split">
+            <div class="vp-split-block">
+              <span class="vp-label">Unique Value</span>
+              <p>Demonstrates the ability to deliberately engineer AI output against communication theory rather than accepting a first draft, and to catch and correct a real technical accuracy gap in AI-generated content before publishing it.</p>
+            </div>
+            <div class="vp-split-block">
+              <span class="vp-label">Relevance</span>
+              <p>My instructor evaluating communication-for-learning skill in an AI/ML context; classmates and change-leadership peers who need to explain technical AI concepts to non-technical stakeholders.</p>
+            </div>
           </div>
-          <div class="vp-row">
-            <span class="vp-label">Target Audience</span>
-            <p>My instructor evaluating communication-for-learning skill in an AI/ML context; classmates and change-leadership peers who need to explain technical AI concepts to non-technical stakeholders.</p>
-          </div>
+        </div>
+        <div class="field">
+          <div class="field-label">References</div>
+          <p>IBM. (n.d.). <em>What is deep learning?</em> IBM Think. https://www.ibm.com/topics/deep-learning</p>
+          <p>IBM. (n.d.). <em>What is a neural network?</em> IBM Think. https://www.ibm.com/topics/neural-networks</p>
         </div>
       </div>
     </div>
@@ -517,6 +418,10 @@
           <span class="chip">Technical Decision-Making</span>
         </div>
         <div class="field">
+          <div class="field-label">Introduction</div>
+          <p>This artifact is a write-up of three real-world data challenge scenarios I worked through with an AI coach: missing data, class imbalance, and data drift.</p>
+        </div>
+        <div class="field">
           <div class="field-label">Objective</div>
           <p>Applied core data-quality, class-imbalance, and data-drift concepts to realistic ML scenarios through an AI-coached activity, demonstrating practical judgment in choosing between competing data engineering techniques rather than reciting definitions.</p>
         </div>
@@ -525,7 +430,7 @@
           <p>Worked through three scenario-based problems with an AI coach — missing values in a customer dataset, severe class imbalance in a fraud detection dataset, and a housing-price model degrading in production months after deployment — reasoning through the tradeoffs of each available technique against the specifics of the scenario rather than defaulting to the first plausible answer.</p>
         </div>
         <div class="field">
-          <div class="field-label">Tools</div>
+          <div class="field-label">Tools and Tech Used</div>
           <p>AI-coached scenario activity (SchoolAI), ChatGPT for infographic design.</p>
         </div>
         <div class="img-row">
@@ -535,15 +440,22 @@
           <div class="field-label">Scenario 3 — Data Drift</div>
           <p>A housing-price model performed perfectly in testing, then started consistently underestimating prices months after deployment — with no code or data-format changes. The cause wasn't a bug; it was data drift, the real-world relationship between features and price shifting after training ended, while the model stayed frozen in the past. The fix isn't a one-time patch but ongoing monitoring: tracking Prediction Distribution Shift (the model's average output over time — a sudden change signals something's off before the real answer is even known) versus Feature Drift (watching the input data itself, like average square footage, for meaningful shifts). Between the two, prediction distribution shift is the more direct early warning, since it flags a problem immediately rather than waiting to notice a shift in the inputs first.</p>
         </div>
-        <div class="vp-inline">
-          <div class="vp-row">
-            <span class="vp-label">Value Proposition</span>
-            <p>Demonstrates applied data science judgment — weighing competing techniques against real constraints like data volume, feature importance, and severity of imbalance, instead of just naming the relevant vocabulary.</p>
+        <div class="field">
+          <div class="field-label">Value Proposition of the Artifact</div>
+          <div class="vp-split">
+            <div class="vp-split-block">
+              <span class="vp-label">Unique Value</span>
+              <p>Demonstrates applied data science judgment — weighing competing techniques against real constraints like data volume, feature importance, and severity of imbalance, instead of just naming the relevant vocabulary.</p>
+            </div>
+            <div class="vp-split-block">
+              <span class="vp-label">Relevance</span>
+              <p>My instructor evaluating applied data preprocessing competency; classmates curious about the practical tradeoffs behind common data-challenge techniques.</p>
+            </div>
           </div>
-          <div class="vp-row">
-            <span class="vp-label">Target Audience</span>
-            <p>My instructor evaluating applied data preprocessing competency; classmates curious about the practical tradeoffs behind common data-challenge techniques.</p>
-          </div>
+        </div>
+        <div class="field">
+          <div class="field-label">References</div>
+          <p>N/A — based on an AI-coached scenario activity (SchoolAI); no external published sources cited.</p>
         </div>
       </div>
     </div>
