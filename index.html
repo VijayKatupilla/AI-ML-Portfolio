@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vijay Katupilla — AI/ML Portfolio</title>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<meta name="description" content="AIML-500 professional portfolio — AI history research, an AI-engineered booking bot, and an honest self-assessment of leadership gaps.">
+<meta name="description" content="AIML-500 professional portfolio — six artifacts spanning AI/ML research, applied system design, technical communication, and a personal leadership framework.">
 <meta property="og:title" content="Vijay Katupilla — AI/ML Portfolio">
-<meta property="og:description" content="AIML-500 professional portfolio: research synthesis, applied AI system design, and self-assessment across four artifacts.">
+<meta property="og:description" content="AIML-500 professional portfolio: applied AI system design, technical communication, and leadership growth across six artifacts.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -80,10 +80,12 @@
   #tab1:checked ~ .tab-buttons label[for="tab1"],
   #tab2:checked ~ .tab-buttons label[for="tab2"],
   #tab3:checked ~ .tab-buttons label[for="tab3"],
-  #tab4:checked ~ .tab-buttons label[for="tab4"]{ color:var(--on-accent); background:var(--accent-tab,var(--amber)); border-color:var(--accent-tab,var(--amber)); }
+  #tab4:checked ~ .tab-buttons label[for="tab4"],
+  #tab5:checked ~ .tab-buttons label[for="tab5"],
+  #tab6:checked ~ .tab-buttons label[for="tab6"]{ color:var(--on-accent); background:var(--accent-tab,var(--amber)); border-color:var(--accent-tab,var(--amber)); }
 
   .tab-panel{ display:none; padding-top:2.5rem; --accent:var(--accent-tab,var(--amber)); }
-  #tab1:checked ~ #panel1, #tab2:checked ~ #panel2, #tab3:checked ~ #panel3, #tab4:checked ~ #panel4{ display:block; }
+  #tab1:checked ~ #panel1, #tab2:checked ~ #panel2, #tab3:checked ~ #panel3, #tab4:checked ~ #panel4, #tab5:checked ~ #panel5, #tab6:checked ~ #panel6{ display:block; }
 
   .artifact .tag{ font-family:'JetBrains Mono',monospace; font-size:0.72rem; color:var(--accent,var(--amber)); text-transform:uppercase; letter-spacing:0.08em; }
   .artifact h2{ font-size:1.55rem; margin:0.4rem 0 0.2rem; }
@@ -152,7 +154,7 @@
   <a href="#value-prop">Value</a>
   <a href="#about">About</a>
   <a href="#artifacts">Artifacts</a>
-  <a href="#testimonials">Testimonials</a>
+  <a href="#disclosure">Disclosure</a>
   <a href="#connect">Connect</a>
 </nav>
 
@@ -162,7 +164,7 @@
     <div class="hero-copy">
       <span class="eyebrow hero-eyebrow">// AIML-500 · Portfolio</span>
       <h1>Vijay Katupilla</h1>
-      <p>Software engineer with six years building cloud-native, enterprise-scale systems — now completing a second Master's focused on applied AI: LLMs, LangChain, and GenAI engineering. This portfolio is a record of that shift, told through four artifacts from this coursework.</p>
+      <p>Software engineer with six years building cloud-native, enterprise-scale systems — now completing a second Master's focused on applied AI: LLMs, LangChain, and GenAI engineering. This portfolio is a record of that shift, told through six artifacts from this coursework.</p>
       <div class="btn-row">
         <a href="#about" class="btn">About Me</a>
         <a href="#artifacts" class="btn solid">View Artifacts →</a>
@@ -188,12 +190,12 @@
 <section id="about">
   <span class="eyebrow">// about — professional bio</span>
   <h2>Where engineering meets applied AI</h2>
-  <p>I combine a full-stack and cloud engineering background — containerized microservices, workflow automation, distributed systems — with a growing focus on applied AI: prompt engineering, retrieval-augmented systems, and multi-agent tools. The artifacts below trace that shift directly: a researched history of how AI got here, a hands-on AI Lab project where I engineered prompts and a constrained booking bot from scratch, and an honest self-assessment of where my leadership skills need to grow to manage AI transitions, not just build them.</p>
+  <p>I combine a full-stack and cloud engineering background — containerized microservices, workflow automation, distributed systems — with a growing focus on applied AI: prompt engineering, retrieval-augmented systems, and multi-agent tools. The artifacts below trace that shift directly: a researched history of how AI got here, a hands-on AI Lab project where I engineered prompts and a constrained booking bot from scratch, concept explainers that translate technical AI/ML ideas for a non-technical audience, applied data science reasoning through real scenarios, and a personal leadership framework naming exactly where my leadership skills still need to grow to manage AI transitions, not just build them.</p>
 
   <ul class="now-list">
     <li><span class="dot">→</span> Building cloud-native microservices and workflow automation platforms professionally</li>
     <li><span class="dot">→</span> Completing a second Master's in AI/ML — LLMs, LangChain, GenAI engineering</li>
-    <li><span class="dot">→</span> Documenting that transition through this coursework portfolio, rough edges included</li>
+    <li><span class="dot">→</span> Documenting that transition through applied AI/ML coursework and portfolio projects</li>
   </ul>
 
   <p>Outside of engineering, I'm a competitive athlete and a youth-sports advocate — I grew up playing competitively in India and have spent the last few years encouraging kids here to see sports as more than a career path: a way to build confidence, discipline, and leadership.</p>
@@ -220,9 +222,9 @@
   <div class="stack-group">
     <h3>Skills demonstrated across this portfolio</h3>
     <div class="chip-row">
-      <span class="chip">Research Synthesis</span><span class="chip">Historical Analysis</span><span class="chip">Technical Writing</span>
-      <span class="chip">AI System Design</span><span class="chip">Product Testing</span><span class="chip">Self-Evaluation</span>
-      <span class="chip">Change Leadership</span><span class="chip">Critical Analysis</span>
+      <span class="chip">Research Synthesis</span><span class="chip">AI System Design</span><span class="chip">Concept Explanation</span>
+      <span class="chip">Instructional Design</span><span class="chip">Applied Data Science</span><span class="chip">Strategic AI Prompting</span>
+      <span class="chip">Self-Evaluation</span><span class="chip">Leadership Synthesis</span>
     </div>
   </div>
 </section>
@@ -230,78 +232,75 @@
 <section id="artifacts">
   <span class="eyebrow">// artifacts</span>
   <h2>Artifacts</h2>
-  <p class="intro">Four artifacts from AIML-500. Pick one to see the full breakdown — objective, process, and what it's meant to prove to whoever's reading it.</p>
+  <p class="intro">Six artifacts from AIML-500. Pick one to see the full breakdown — objective, process, and what it's meant to prove to whoever's reading it.</p>
 
   <div class="tabs">
     <input type="radio" name="artifact-tabs" id="tab1" checked>
     <input type="radio" name="artifact-tabs" id="tab2">
     <input type="radio" name="artifact-tabs" id="tab3">
     <input type="radio" name="artifact-tabs" id="tab4">
+    <input type="radio" name="artifact-tabs" id="tab5">
+    <input type="radio" name="artifact-tabs" id="tab6">
 
     <div class="tab-buttons">
-      <label for="tab1">Artifact 1 — AI Lab</label>
+      <label for="tab1">Artifact 1 — AI/ML Timeline</label>
       <label for="tab2">Artifact 2 — AI vs. ML vs. DL</label>
       <label for="tab3">Artifact 3 — Deep Learning &amp; Neural Networks</label>
       <label for="tab4">Artifact 4 — Data Challenges in ML</label>
+      <label for="tab5">Artifact 5 — Personal Framework</label>
+      <label for="tab6">Artifact 6 — AI Lab</label>
     </div>
 
-    <div class="tab-panel" id="panel1" style="--accent-tab:var(--amber);">
-      <div class="artifact" style="--accent:var(--amber);">
+    <div class="tab-panel" id="panel1" style="--accent-tab:var(--cyan);">
+      <div class="artifact" style="--accent:var(--cyan);">
         <span class="tag">Artifact 01</span>
-        <h2>AI Lab: The Speaker's Bureau Bot</h2>
+        <h2>75 Years of AI: What the History Actually Teaches</h2>
         <div class="skill-row">
-          <span class="chip">Prompt Engineering</span>
-          <span class="chip">AI System Design</span>
-          <span class="chip">Product Testing</span>
+          <span class="chip">Research Synthesis</span>
+          <span class="chip">Historical Analysis</span>
+          <span class="chip">Technical Writing</span>
         </div>
         <div class="field">
           <div class="field-label">Introduction</div>
-          <p>This artifact is a group AI Lab project in which I helped design and build a working AI booking bot for a peer "speaker's bureau," moving from a live interview to a constrained, testable AI product.</p>
+          <p>This artifact is a researched visual and written history of AI's 75-year evolution, built to identify the recurring pattern behind AI's cycles of hype, collapse, and breakthrough rather than just list dates.</p>
         </div>
         <div class="field">
           <div class="field-label">Objective</div>
-          <p>Developed to practice deep interviewing, structured AI prompt engineering, and AI system design by building a functional booking bot — moving from a human conversation to a constrained, queryable AI product.</p>
+          <p>A researched exploration of AI's 75-year evolution — from Turing's founding question to the modern generative AI era — identifying the pattern behind AI's cycles of hype, collapse, and breakthrough.</p>
         </div>
         <div class="field">
           <div class="field-label">Process</div>
-          <p>Interviewed a teammate, drafted structured AI prompts for a TED-style introduction, built my own Speaker Profile, and — as part of the Bot Builders task force — compiled the team's profiles into a knowledge base with a system prompt constraining the bot to act only as a booking agent. Tested live against unscripted audience queries.</p>
+          <p>Researched five major AI eras, identified the cause and effect behind two AI winters, and synthesized four original observations connecting theory, funding, and hardware across the full timeline.</p>
         </div>
         <div class="field">
           <div class="field-label">Tools and Tech Used</div>
-          <p>Google AI Studio (bot platform), an AI assistant for prompt drafting and iteration, AI design tools (Chat GPT) for infographic creation, Python/image editing — used to remove corrupted AI-generated text from the process infographic before publishing, structured peer-interview methodology.</p>
+          <p>PowerPoint, Google Scholar and academic/industry sources (IEEE Computer Society, Our World in Data), educational platforms and tutorials for practical implementation context, video research, Claude (Anthropic) — used to fact-check and correct a slide that had misattributed several AI researchers to the wrong companies.</p>
         </div>
         <div class="img-row">
-          <img class="img-portrait" src="assets/process_infographic_cleaned.png" alt="Project process infographic" onclick="openLightbox('assets/process_infographic_cleaned.png')">
-          <img class="img-landscape" src="assets/Marketing_Infographic.png" alt="Speaker's Bureau marketing infographic" onclick="openLightbox('assets/Marketing_Infographic.png')">
-        </div>
-        <div class="field">
-          <div class="field-label">Speaker Profile — Vijay</div>
-          <p>Software developer, competitive athlete, and youth-sports advocate. Focused on encouraging young people to see sports as a tool for confidence, discipline, leadership, and resilience.</p>
-          <ul>
-            <li><strong>Keynote topics:</strong> The Power of Sports Beyond Competition · Lessons Sports Teach That Classrooms Cannot · Building Discipline, Resilience, and Leadership Through Sports</li>
-            <li><strong>Audience:</strong> Students · Educators · Youth organizations</li>
-            <li><strong>Style:</strong> Conversational, storytelling-driven, interactive</li>
-          </ul>
+          <img class="img-landscape" src="assets/timeline_infographic.svg" alt="Visual timeline of AI history from 1950 to present, showing five eras and four key takeaways" style="max-width:680px;" onclick="openLightbox('assets/timeline_infographic.svg')">
         </div>
         <div class="btn-row">
-          <a href="https://creative-folks.ai.studio/" class="btn solid" target="_blank" rel="noopener">Try the Bot →</a>
+          <a href="assets/Katupilla_Vijay_AI_History_Timeline_FIXED.pptx" class="btn">Download the full 11-slide deck</a>
         </div>
         <div class="field">
           <div class="field-label">Value Proposition of the Artifact</div>
           <div class="vp-split">
             <div class="vp-split-block">
               <span class="vp-label">Unique Value</span>
-              <p>Demonstrates the difference between casually prompting an AI and engineering a constrained AI system end-to-end, from a raw interview to a working, testable product.</p>
+              <p>Demonstrates the ability to synthesize a broad, unstructured body of research into an original, defensible argument rather than a simple timeline of facts.</p>
             </div>
             <div class="vp-split-block">
               <span class="vp-label">Relevance</span>
-              <p>My instructor evaluating applied AI/ML system-building skill; classmates interested in prompt engineering and AI product design.</p>
+              <p>My instructor and classmates assessing research and synthesis skill, because tracing cause-and-effect across AI's history is what shows I can reason about the field, not just recall dates; secondarily, anyone wanting a fast, opinionated history of AI.</p>
             </div>
           </div>
         </div>
         <div class="field">
           <div class="field-label">References</div>
-          <p>N/A — original team-produced coursework; no external sources cited.</p>
+          <p>Bender, E., &amp; Our World in Data. (n.d.). <em>A brief history of artificial intelligence.</em> Our World in Data.</p>
+          <p>IEEE Computer Society. (n.d.). <em>The evolution of AI: From foundations to future prospects.</em></p>
+          <p>Putchuon. (2024, May 30). <em>The entire history of artificial intelligence</em> [Video]. YouTube.</p>
+          <p style="color:var(--text-dim); font-style:italic;"></p>
         </div>
       </div>
     </div>
@@ -343,13 +342,13 @@
             </div>
             <div class="vp-split-block">
               <span class="vp-label">Relevance</span>
-              <p>My instructor evaluating conceptual understanding; secondarily, classmates or newcomers wanting a fast visual orientation to the field.</p>
+              <p>My instructor evaluating conceptual understanding, because explaining AI/ML/DL correctly in one graphic proves the concept is actually understood, not memorized; secondarily, classmates or newcomers wanting a fast visual orientation to the field.</p>
             </div>
           </div>
         </div>
         <div class="field">
           <div class="field-label">References</div>
-          <p>N/A — general technical references were consulted during research; no single external source is directly cited in the final graphic.</p>
+          <p>AIML-500 course materials and technical reference articles consulted during development of the infographic.</p>
         </div>
       </div>
     </div>
@@ -438,7 +437,7 @@
         </div>
         <div class="field">
           <div class="field-label">Scenario 3 — Data Drift</div>
-          <p>A housing-price model performed perfectly in testing, then started consistently underestimating prices months after deployment — with no code or data-format changes. The cause wasn't a bug; it was data drift, the real-world relationship between features and price shifting after training ended, while the model stayed frozen in the past. The fix isn't a one-time patch but ongoing monitoring: tracking Prediction Distribution Shift (the model's average output over time — a sudden change signals something's off before the real answer is even known) versus Feature Drift (watching the input data itself, like average square footage, for meaningful shifts). Between the two, prediction distribution shift is the more direct early warning, since it flags a problem immediately rather than waiting to notice a shift in the inputs first.</p>
+          <p>A housing-price model may lose accuracy over time even when its code has not changed because the incoming data or the relationship between the input features and housing prices has shifted. Changes in the input distribution are commonly described as feature or data drift, while changes in the relationship between the inputs and the target can be considered concept drift. The appropriate response is ongoing monitoring rather than a one-time fix. Teams can monitor feature distributions and prediction distributions for early warning signals, and compare predictions with newly available ground-truth outcomes to confirm whether model performance has actually degraded.</p>
         </div>
         <div class="field">
           <div class="field-label">Value Proposition of the Artifact</div>
@@ -455,7 +454,151 @@
         </div>
         <div class="field">
           <div class="field-label">References</div>
-          <p>N/A — based on an AI-coached scenario activity (SchoolAI); no external published sources cited.</p>
+          <p>SchoolAI — "Data Challenge Scenarios Coach," an AI-coached scenario activity provided through the course. No external published sources were used beyond this activity.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="panel5" style="--accent-tab:var(--cyan);">
+      <div class="artifact" style="--accent:var(--cyan);">
+        <span class="tag">Artifact 05</span>
+        <h2>Personal Framework for AI/ML Leadership</h2>
+        <div class="skill-row">
+          <span class="chip">Self-Reflection</span>
+          <span class="chip">Strategic Planning</span>
+          <span class="chip">Leadership Synthesis</span>
+        </div>
+        <div class="field">
+          <div class="field-label">Introduction</div>
+          <p>This artifact brings together my learning from the course into a personal framework for how I want to approach AI/ML leadership. It connects my original leadership and AI/ML integration self-assessments with what I learned about communication, iterative leadership, responsible AI, stakeholder alignment, adaptability, and continuous professional development.</p>
+        </div>
+        <div class="field">
+          <div class="field-label">Objective</div>
+          <p>The objective was to define the type of AI/ML leader I want to become and translate that vision into a practical framework containing a mission statement, core values, measurable objectives, action plans, and a process for evaluation and adaptation.</p>
+        </div>
+        <div class="field">
+          <div class="field-label">Process</div>
+          <p>Reviewed my original Change Management Skills Self-Assessment and AI/ML Integration Leadership Skills Self-Assessment, identified strengths and areas for improvement, and reflected on major course concepts including iterative leadership, communication during change, stakeholder alignment, ethical AI, human bias, responsible AI/ML integration, feedback loops, and continuous learning. I then translated those reflections into a mission statement, core values, measurable objectives, short-term and long-term action plans, and a recurring evaluation process.</p>
+        </div>
+        <div class="field">
+          <div class="field-label">Tools and Tech Used</div>
+          <p>Change Management Skills Self-Assessment, AI/ML Integration Leadership Skills Self-Assessment, AIML-500 course materials, reflection and self-evaluation, and ChatGPT for organizing and refining the framework based on my own assessment results and course reflections.</p>
+        </div>
+        <div class="img-row">
+          <img class="img-landscape" src="assets/framework_diagram.svg" alt="Diagram showing the five-part personal leadership framework as a revisited cycle: Mission, Values, Objectives, Action Plans, Evaluation" style="max-width:680px;" onclick="openLightbox('assets/framework_diagram.svg')">
+        </div>
+        <div class="field">
+          <div class="field-label">Mission Statement</div>
+          <p>My mission is to lead AI/ML initiatives that connect technical innovation with responsible decision-making while creating teams that communicate openly, learn through iteration, and adapt as technology, evidence, and organizational needs change.</p>
+        </div>
+        <div class="field">
+          <div class="field-label">Core Values</div>
+          <ul>
+            <li><strong>Responsibility and Ethical Stewardship</strong> — AI/ML leadership should consider both technical performance and the consequences of how systems are used. Responsibility should be shared across technical and organizational teams.</li>
+            <li><strong>Transparency</strong> — Leaders should communicate clearly about AI capabilities, limitations, uncertainty, and decision-making.</li>
+            <li><strong>Continuous and Iterative Learning</strong> — Plans should evolve based on evidence, feedback, changing technology, and organizational needs.</li>
+            <li><strong>Collaboration and Shared Accountability</strong> — AI/ML integration requires engineers, data scientists, business leaders, users, and other stakeholders to contribute different perspectives.</li>
+          </ul>
+        </div>
+        <div class="field">
+          <div class="field-label">Key Objectives</div>
+          <ul>
+            <li><strong>Strengthen End-to-End AI/ML Change Leadership</strong> — Improve my ability to lead AI/ML initiatives from planning through implementation and evaluation.</li>
+            <li><strong>Make Responsible AI Part of Development</strong> — Include ethical considerations such as bias, fairness, transparency, limitations, and user impact during development rather than treating them as an afterthought.</li>
+            <li><strong>Build Stronger Feedback and Measurement Practices</strong> — Define measurable success indicators and feedback mechanisms for significant AI/ML initiatives.</li>
+            <li><strong>Develop People Alongside Technology</strong> — Improve my ability to prepare and support people through AI/ML change through knowledge sharing, training, and communication.</li>
+          </ul>
+        </div>
+        <div class="field">
+          <div class="field-label">Action Plans</div>
+          <p>Short term, I will continue developing my technical AI/ML knowledge while connecting that knowledge to business impact, ethics, and change leadership. I will seek feedback after meaningful leadership or collaborative experiences and use a simple pre-implementation checklist covering objectives, stakeholders, risks, ethical considerations, success measures, and feedback.</p>
+          <p>Long term, I will continue my technical education, seek mentorship from experienced AI/ML leaders, take on more cross-functional responsibilities, and create structured knowledge-sharing opportunities that help others understand and adapt to AI/ML technologies.</p>
+        </div>
+        <div class="field">
+          <div class="field-label">Evaluation and Adaptation</div>
+          <p>I will treat this framework as a living document. Each month, I will reflect on one leadership situation. After major AI/ML projects or milestones, I will conduct a retrospective and seek stakeholder feedback. Quarterly, I will review progress against my objectives. Every six months, I will repeat selected parts of my original self-assessments and compare the results with real examples from my work. Annually, I will review and revise the entire framework based on new responsibilities, feedback, and development priorities.</p>
+        </div>
+        <div class="field">
+          <div class="field-label">Value Proposition of the Artifact</div>
+          <div class="vp-split">
+            <div class="vp-split-block">
+              <span class="vp-label">Unique Value</span>
+              <p>Demonstrates how I connect AI/ML knowledge with leadership, ethics, communication, adaptability, and continuous improvement — not just what I know about AI/ML, but how I intend to lead its integration responsibly.</p>
+            </div>
+            <div class="vp-split-block">
+              <span class="vp-label">Relevance</span>
+              <p>Future employers, instructors, technical teams, and collaborators may find this useful because it shows not just what I know about AI/ML, but how I intend to lead AI/ML integration responsibly.</p>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field-label">References/Resources</div>
+          <ul>
+            <li>Change Management Skills Self-Assessment</li>
+            <li>AI/ML Integration Leadership Skills Self-Assessment</li>
+            <li>AIML-500 course materials and workshop activities</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="panel6" style="--accent-tab:var(--amber);">
+      <div class="artifact" style="--accent:var(--amber);">
+        <span class="tag">Artifact 06</span>
+        <h2>AI Lab: The Speaker's Bureau Bot</h2>
+        <div class="skill-row">
+          <span class="chip">Prompt Engineering</span>
+          <span class="chip">AI System Design</span>
+          <span class="chip">Product Testing</span>
+        </div>
+        <div class="field">
+          <div class="field-label">Introduction</div>
+          <p>This artifact is a group AI Lab project in which I helped design and build a working AI booking bot for a peer "speaker's bureau," moving from a live interview to a constrained, testable AI product.</p>
+        </div>
+        <div class="field">
+          <div class="field-label">Objective</div>
+          <p>Developed to practice deep interviewing, structured AI prompt engineering, and AI system design by building a functional booking bot — moving from a human conversation to a constrained, queryable AI product.</p>
+        </div>
+        <div class="field">
+          <div class="field-label">Process</div>
+          <p>Interviewed a teammate, drafted structured AI prompts for a TED-style introduction, built my own Speaker Profile, and — as part of the Bot Builders task force — compiled the team's profiles into a knowledge base with a system prompt constraining the bot to act only as a booking agent. Tested live against unscripted audience queries.</p>
+        </div>
+        <div class="field">
+          <div class="field-label">Tools and Tech Used</div>
+          <p>Google AI Studio (bot platform), an AI assistant for prompt drafting and iteration, AI design tools (ChatGPT) for infographic creation, Python/image editing — used to remove corrupted AI-generated text from the process infographic before publishing, structured peer-interview methodology.</p>
+        </div>
+        <div class="img-row">
+          <img class="img-portrait" src="assets/process_infographic_cleaned.png" alt="Project process infographic" onclick="openLightbox('assets/process_infographic_cleaned.png')">
+          <img class="img-landscape" src="assets/Marketing_Infographic.png" alt="Speaker's Bureau marketing infographic" onclick="openLightbox('assets/Marketing_Infographic.png')">
+        </div>
+        <div class="field">
+          <div class="field-label">Speaker Profile — Vijay</div>
+          <p>Software developer, competitive athlete, and youth-sports advocate. Focused on encouraging young people to see sports as a tool for confidence, discipline, leadership, and resilience.</p>
+          <ul>
+            <li><strong>Keynote topics:</strong> The Power of Sports Beyond Competition · Lessons Sports Teach That Classrooms Cannot · Building Discipline, Resilience, and Leadership Through Sports</li>
+            <li><strong>Audience:</strong> Students · Educators · Youth organizations</li>
+            <li><strong>Style:</strong> Conversational, storytelling-driven, interactive</li>
+          </ul>
+        </div>
+        <div class="btn-row">
+          <a href="https://creative-folks.ai.studio/" class="btn solid" target="_blank" rel="noopener">Try the Bot →</a>
+        </div>
+        <div class="field">
+          <div class="field-label">Value Proposition of the Artifact</div>
+          <div class="vp-split">
+            <div class="vp-split-block">
+              <span class="vp-label">Unique Value</span>
+              <p>Demonstrates the difference between casually prompting an AI and engineering a constrained AI system end-to-end, from a raw interview to a working, testable product.</p>
+            </div>
+            <div class="vp-split-block">
+              <span class="vp-label">Relevance</span>
+              <p>This artifact gives my instructor and technical audiences concrete evidence that I can move beyond simple prompting and think about structured knowledge, system instructions, testing, and user behavior when designing an AI application. It is also relevant to classmates and potential employers interested in practical prompt engineering and AI system design.</p>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field-label">References</div>
+          <p>N/A — original team-produced coursework; no external sources cited.</p>
         </div>
       </div>
     </div>
@@ -463,15 +606,10 @@
   </div>
 </section>
 
-<section id="testimonials">
-  <span class="eyebrow">// testimonials</span>
-  <h2 style="font-size:1.8rem; margin-bottom:0.3rem;">What colleagues say</h2>
-  <div class="testimonial-block">
-    <p>In performance conversations, my engineering manager has described my work on our team's cloud migration and automation projects as dependable and clearly communicated, and has noted that I'm someone the team can rely on to work through ambiguous problems without losing momentum.</p>
-  </div>
-  <div class="testimonial-block">
-    <p>A teammate from the AI Lab group project mentioned that the system prompt I wrote for our booking bot was the piece that made the live demo actually hold up under unscripted questions, and that I was easy to hand ambiguous, half-defined tasks to during crunch.</p>
-  </div>
+<section id="disclosure">
+  <span class="eyebrow" style="color:var(--green);">// ai disclosure</span>
+  <h2 style="font-size:1.6rem; margin-bottom:0.8rem;">How AI Was Used in This Portfolio</h2>
+  <p style="color:var(--text-dim); max-width:66ch;">Generative AI tools, primarily Claude and ChatGPT, were used across this portfolio to assist with brainstorming, drafting, organization, visual creation, refinement, and website presentation. ChatGPT was used to help organize and refine the Personal AI/ML Leadership Framework based on my self-assessment results and course reflections. Claude was also used to assist with visual design and portfolio HTML development. The personal beliefs, values, leadership goals, conclusions, and final decisions represented in this portfolio are my own. Tool use specific to each artifact is also listed in that artifact's own Tools and Tech Used field.</p>
 </section>
 
 <section id="connect">
